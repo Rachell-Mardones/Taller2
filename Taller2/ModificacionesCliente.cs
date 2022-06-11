@@ -16,5 +16,33 @@ namespace Taller2
         {
             InitializeComponent();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Modificaciones f = new Modificaciones();
+            this.Hide();
+            f.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AgregarCliente f = new AgregarCliente();
+            this.Hide();
+            f.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            EliminarCliente f = new EliminarCliente();
+            this.Hide();
+            f.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AgregarDineroCliente f = new AgregarDineroCliente();
+            this.Hide();
+            f.Show();
+        }
     }
 }

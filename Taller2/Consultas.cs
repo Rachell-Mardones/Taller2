@@ -21,5 +21,33 @@ namespace Taller2
         {
 
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Form1 f = new Form1();
+            this.Hide();
+            f.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DesplegarCliente f = new DesplegarCliente();
+            this.Hide();
+            f.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            AntigüedadEmpleado f = new AntigüedadEmpleado();
+            this.Hide();
+            f.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Libro f = new Libro();
+            this.Hide();
+            f.Show();
+        }
     }
 }
