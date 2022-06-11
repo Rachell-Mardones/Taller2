@@ -131,6 +131,12 @@
     <Compile Include="CambiarSalario.Designer.cs">
       <DependentUpon>CambiarSalario.cs</DependentUpon>
     </Compile>
+    <Compile Include="CantidadStockYPrecioVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CantidadStockYPrecioVenta.Designer.cs">
+      <DependentUpon>CantidadStockYPrecioVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConexMySQL.cs" />
     <Compile Include="Consultas.cs">
       <SubType>Form</SubType>
@@ -174,6 +180,18 @@
     <Compile Include="Libro.Designer.cs">
       <DependentUpon>Libro.cs</DependentUpon>
     </Compile>
+    <Compile Include="LibrosCategoriacs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LibrosCategoriacs.Designer.cs">
+      <DependentUpon>LibrosCategoriacs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LibrosCompradosPorCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LibrosCompradosPorCliente.Designer.cs">
+      <DependentUpon>LibrosCompradosPorCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="LibrosMasVendidos%2812%29.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,11 +210,29 @@
     <Compile Include="LibrosPorAutor.Designer.cs">
       <DependentUpon>LibrosPorAutor.cs</DependentUpon>
     </Compile>
-    <Compile Include="LibrosPorCategoria.cs">
+    <Compile Include="LibrosPorCaracter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LibrosPorCategoria.Designer.cs">
-      <DependentUpon>LibrosPorCategoria.cs</DependentUpon>
+    <Compile Include="LibrosPorCaracter.Designer.cs">
+      <DependentUpon>LibrosPorCaracter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LibrosPorCategoria%2814%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LibrosPorCategoria%2814%29.Designer.cs">
+      <DependentUpon>LibrosPorCategoria%2814%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LibrosSinVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LibrosSinVenta.Designer.cs">
+      <DependentUpon>LibrosSinVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListadoLibrosPromocion%2822%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoLibrosPromocion%2822%29.Designer.cs">
+      <DependentUpon>ListadoLibrosPromocion%2822%29.cs</DependentUpon>
     </Compile>
     <Compile Include="Modificaciones.cs">
       <SubType>Form</SubType>
@@ -236,6 +272,12 @@
     <Compile Include="RealizarVenta.Designer.cs">
       <DependentUpon>RealizarVenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="VentasPorLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentasPorLibro.Designer.cs">
+      <DependentUpon>VentasPorLibro.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AgregarCategoria.resx">
       <DependentUpon>AgregarCategoria.cs</DependentUpon>
     </EmbeddedResource>
@@ -256,6 +298,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CambiarSalario.resx">
       <DependentUpon>CambiarSalario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CantidadStockYPrecioVenta.resx">
+      <DependentUpon>CantidadStockYPrecioVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas.resx">
       <DependentUpon>Consultas.cs</DependentUpon>
@@ -278,6 +323,12 @@
     <EmbeddedResource Include="Libro.resx">
       <DependentUpon>Libro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LibrosCategoriacs.resx">
+      <DependentUpon>LibrosCategoriacs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LibrosCompradosPorCliente.resx">
+      <DependentUpon>LibrosCompradosPorCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LibrosMasVendidos%2812%29.resx">
       <DependentUpon>LibrosMasVendidos%2812%29.cs</DependentUpon>
     </EmbeddedResource>
@@ -287,8 +338,17 @@
     <EmbeddedResource Include="LibrosPorAutor.resx">
       <DependentUpon>LibrosPorAutor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LibrosPorCategoria.resx">
-      <DependentUpon>LibrosPorCategoria.cs</DependentUpon>
+    <EmbeddedResource Include="LibrosPorCaracter.resx">
+      <DependentUpon>LibrosPorCaracter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LibrosPorCategoria%2814%29.resx">
+      <DependentUpon>LibrosPorCategoria%2814%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LibrosSinVenta.resx">
+      <DependentUpon>LibrosSinVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadoLibrosPromocion%2822%29.resx">
+      <DependentUpon>ListadoLibrosPromocion%2822%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modificaciones.resx">
       <DependentUpon>Modificaciones.cs</DependentUpon>
@@ -317,6 +377,9 @@
     </Compile>
     <EmbeddedResource Include="RealizarVenta.resx">
       <DependentUpon>RealizarVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentasPorLibro.resx">
+      <DependentUpon>VentasPorLibro.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
