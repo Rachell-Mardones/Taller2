@@ -1,0 +1,1 @@
+Server=localhost;Port=3306;Database=Taller1;Uid=root;Pwd=rml8991tqm;
