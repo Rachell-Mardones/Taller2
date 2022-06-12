@@ -62,7 +62,7 @@ namespace Taller2
         private void button6_Click(object sender, EventArgs e)
         {
             LibrosCompradosPorCliente f = new LibrosCompradosPorCliente();
-            this.Hide();
+            this.Hide(;
             f.Show();
         }
     }

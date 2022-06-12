@@ -61,4 +61,3 @@ D:\Programas\Proyectos\Taller2\Taller2\obj\Debug\Taller2.ListadoLibrosPromocion_
 D:\Programas\Proyectos\Taller2\Taller2\obj\Debug\Taller2.ModificarDescuento.resources
 D:\Programas\Proyectos\Taller2\Taller2\obj\Debug\Taller2.RealizarVenta.resources
 D:\Programas\Proyectos\Taller2\Taller2\obj\Debug\Taller2.VentasPorLibro.resources
-D:\Programas\Proyectos\Taller2\Taller2\obj\Debug\Taller2.Libro2.resources
