@@ -37,7 +37,7 @@ namespace Taller2
             this.Hide();
             f.Show();
         }
-
+        fbgdgvdf
         private void button3_Click(object sender, EventArgs e)
         {
             AgregarDineroCliente f = new AgregarDineroCliente();
