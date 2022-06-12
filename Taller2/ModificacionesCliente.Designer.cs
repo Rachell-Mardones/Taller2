@@ -46,7 +46,7 @@ namespace Taller2
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(124, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(533, 49);
+            this.label1.Size = new System.Drawing.Size(546, 50);
             this.label1.TabIndex = 2;
             this.label1.Text = "Modificaciones Clientes";
             // 
@@ -70,7 +70,6 @@ namespace Taller2
             this.button1.TabIndex = 9;
             this.button1.Text = "Ingresar";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
@@ -92,7 +91,6 @@ namespace Taller2
             this.button2.TabIndex = 11;
             this.button2.Text = "Ingresar";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button7
             // 
@@ -104,7 +102,6 @@ namespace Taller2
             this.button7.TabIndex = 16;
             this.button7.Text = "Atrás";
             this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // label4
             // 
@@ -126,7 +123,6 @@ namespace Taller2
             this.button3.TabIndex = 18;
             this.button3.Text = "Ingresar";
             this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // ModificacionesCliente
             // 

@@ -16,12 +16,5 @@ namespace Taller2
         {
             InitializeComponent();
         }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            ModificacionesEmpleados f = new ModificacionesEmpleados();
-            this.Hide();
-            f.Show();
-        }
     }
 }

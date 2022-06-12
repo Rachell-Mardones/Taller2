@@ -16,34 +16,5 @@ namespace Taller2
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            string clave = textBox1.Text;
-
-            if (clave != "123456")
-            {
-
-                MessageBox.Show("Clave de administrador incorrecto ");
-
-
-            }
-            else
-            {
-                Modificaciones f2 = new Modificaciones();
-                this.Hide();
-                f2.Show();
-
-
-            }
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            Form1 f = new Form1();
-            this.Hide();
-            f.Show();
-        }
     }
 }
-
