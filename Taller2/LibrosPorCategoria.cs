@@ -23,5 +23,10 @@ namespace Taller2
             this.Hide();
             f.Show();
         }
+
+        private void LibrosPorCategoria_Load(object sender, EventArgs e)
+        {
+         
+        }
     }
 }
