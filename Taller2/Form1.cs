@@ -26,19 +26,5 @@ namespace Taller2
         {
 
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            IngresarModificaciones f = new IngresarModificaciones();
-            this.Hide();
-            f.Show();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Consultas f = new Consultas();
-            this.Hide();
-            f.Show();
-        }
     }
 }

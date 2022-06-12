@@ -21,33 +21,5 @@ namespace Taller2
         {
 
         }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            Modificaciones f = new Modificaciones();
-            this.Hide();
-            f.Show();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            AgregarEmpleado f = new AgregarEmpleado();
-            this.Hide();
-            f.Show();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            CambiarSalario f = new CambiarSalario();
-            this.Hide();
-            f.Show();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            RealizarVenta f = new RealizarVenta();
-            this.Hide();
-            f.Show();
-        }
     }
 }

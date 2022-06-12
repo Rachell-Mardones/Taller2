@@ -216,11 +216,11 @@
     <Compile Include="LibrosPorCaracter.Designer.cs">
       <DependentUpon>LibrosPorCaracter.cs</DependentUpon>
     </Compile>
-    <Compile Include="LibrosPorCategoria.cs">
+    <Compile Include="LibrosPorCategoria%2814%29.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LibrosPorCategoria.Designer.cs">
-      <DependentUpon>LibrosPorCategoria.cs</DependentUpon>
+    <Compile Include="LibrosPorCategoria%2814%29.Designer.cs">
+      <DependentUpon>LibrosPorCategoria%2814%29.cs</DependentUpon>
     </Compile>
     <Compile Include="LibrosSinVenta.cs">
       <SubType>Form</SubType>
@@ -341,8 +341,8 @@
     <EmbeddedResource Include="LibrosPorCaracter.resx">
       <DependentUpon>LibrosPorCaracter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LibrosPorCategoria.resx">
-      <DependentUpon>LibrosPorCategoria.cs</DependentUpon>
+    <EmbeddedResource Include="LibrosPorCategoria%2814%29.resx">
+      <DependentUpon>LibrosPorCategoria%2814%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LibrosSinVenta.resx">
       <DependentUpon>LibrosSinVenta.cs</DependentUpon>

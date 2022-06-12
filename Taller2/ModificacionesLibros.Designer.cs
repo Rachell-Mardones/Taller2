@@ -48,7 +48,7 @@ namespace Taller2
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(132, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(494, 49);
+            this.label1.Size = new System.Drawing.Size(508, 50);
             this.label1.TabIndex = 4;
             this.label1.Text = "Modificaciones Libros";
             // 
@@ -72,7 +72,6 @@ namespace Taller2
             this.button4.TabIndex = 12;
             this.button4.Text = "Ingresar";
             this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label6
             // 
@@ -94,7 +93,6 @@ namespace Taller2
             this.button5.TabIndex = 14;
             this.button5.Text = "Ingresar";
             this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // label7
             // 
@@ -116,7 +114,6 @@ namespace Taller2
             this.button6.TabIndex = 16;
             this.button6.Text = "Ingresar";
             this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // label2
             // 
@@ -138,7 +135,6 @@ namespace Taller2
             this.button1.TabIndex = 18;
             this.button1.Text = "Ingresar";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button7
             // 
@@ -150,7 +146,6 @@ namespace Taller2
             this.button7.TabIndex = 19;
             this.button7.Text = "Atrás";
             this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // ModificacionesLibros
             // 
