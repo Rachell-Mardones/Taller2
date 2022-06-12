@@ -180,6 +180,12 @@
     <Compile Include="Libro.Designer.cs">
       <DependentUpon>Libro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Libro2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Libro2.Designer.cs">
+      <DependentUpon>Libro2.cs</DependentUpon>
+    </Compile>
     <Compile Include="LibrosCategoriacs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -322,6 +328,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Libro.resx">
       <DependentUpon>Libro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Libro2.resx">
+      <DependentUpon>Libro2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LibrosCategoriacs.resx">
       <DependentUpon>LibrosCategoriacs.cs</DependentUpon>
