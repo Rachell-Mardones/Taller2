@@ -40,9 +40,9 @@ namespace Taller2
 
         private void button3_Click(object sender, EventArgs e)
         {
-            AgregarDineroCliente f = new AgregarDineroCliente();
+            AgregarDineroCliente f2 = new AgregarDineroCliente();
             this.Hide();
-            f.Show();
+            f2.Show();
         }
     }
 }
