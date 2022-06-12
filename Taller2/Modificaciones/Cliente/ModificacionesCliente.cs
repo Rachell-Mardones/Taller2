@@ -37,12 +37,17 @@ namespace Taller2
             this.Hide();
             f.Show();
         }
-        fbgdgvdf
+        
         private void button3_Click(object sender, EventArgs e)
         {
             AgregarDineroCliente f = new AgregarDineroCliente();
             this.Hide();
             f.Show();
+        }
+
+        private void ModificacionesCliente_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
