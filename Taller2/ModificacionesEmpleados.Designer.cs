@@ -36,6 +36,7 @@ namespace Taller2
             this.button3 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -45,7 +46,7 @@ namespace Taller2
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(93, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(606, 50);
+            this.label1.Size = new System.Drawing.Size(593, 49);
             this.label1.TabIndex = 3;
             this.label1.Text = "Modificaciones Empleados";
             // 
@@ -70,6 +71,7 @@ namespace Taller2
             this.button2.TabIndex = 17;
             this.button2.Text = "Ingresar";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label4
             // 
@@ -91,6 +93,7 @@ namespace Taller2
             this.button3.TabIndex = 19;
             this.button3.Text = "Ingresar";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label5
             // 
@@ -112,6 +115,19 @@ namespace Taller2
             this.button4.TabIndex = 21;
             this.button4.Text = "Ingresar";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.button7.Font = new System.Drawing.Font("Javanese Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(12, 404);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(83, 34);
+            this.button7.TabIndex = 22;
+            this.button7.Text = "Atrás";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // ModificacionesEmpleados
             // 
@@ -119,6 +135,7 @@ namespace Taller2
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button3);
@@ -142,5 +159,6 @@ namespace Taller2
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button7;
     }
 }
