@@ -10,44 +10,44 @@ using System.Windows.Forms;
 
 namespace Taller2
 {
-    public partial class ModificacionesLibros : Form
+    public partial class Libro2 : Form
     {
-        public ModificacionesLibros()
+        public Libro2()
         {
             InitializeComponent();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            InsertarLibro f = new InsertarLibro();
+            LibrosCategoriacs f = new LibrosCategoriacs();
             this.Hide();
             f.Show();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            AumentarStock f = new AumentarStock();
+            LibrosSinVenta f = new LibrosSinVenta();
             this.Hide();
             f.Show();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            ModificarDescuento f = new ModificarDescuento();
+            CantidadStockYPrecioVenta f = new CantidadStockYPrecioVenta();
             this.Hide();
             f.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AgregarCategoria f = new AgregarCategoria();
+            VentasPorLibro f = new VentasPorLibro();
             this.Hide();
             f.Show();
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
-            Modificaciones f = new Modificaciones();
+            ListadoLibrosPromocion_22_ f = new ListadoLibrosPromocion_22_();
             this.Hide();
             f.Show();
         }
