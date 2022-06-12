@@ -43,7 +43,7 @@ namespace Taller2
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(73, 51);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(625, 49);
+            this.label1.Size = new System.Drawing.Size(643, 50);
             this.label1.TabIndex = 0;
             this.label1.Text = "Librería Antofagasta Libros";
             // 
@@ -77,7 +77,6 @@ namespace Taller2
             this.button1.TabIndex = 3;
             this.button1.Text = "Ingresar";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -89,7 +88,6 @@ namespace Taller2
             this.button2.TabIndex = 4;
             this.button2.Text = "Ingresar";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 

@@ -16,12 +16,5 @@ namespace Taller2
         {
             InitializeComponent();
         }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            Libro2 f = new Libro2();
-            this.Hide();
-            f.Show();
-        }
     }
 }
