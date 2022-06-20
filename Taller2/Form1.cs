@@ -19,8 +19,8 @@ namespace Taller2
         public Form1()
         {
             InitializeComponent();
-            ConexMySQL coneccion = new ConexMySQL();
-            coneccion.open();
+            ConexMySQL conex = new ConexMySQL();
+            conex.open();
 
         }
 

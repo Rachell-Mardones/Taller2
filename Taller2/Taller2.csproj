@@ -89,6 +89,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DetalleVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetalleVenta.Designer.cs">
+      <DependentUpon>DetalleVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modificaciones\Libros\AgregarCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -284,6 +290,9 @@
     <Compile Include="Consultas\VentasPorLibro.Designer.cs">
       <DependentUpon>VentasPorLibro.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DetalleVenta.resx">
+      <DependentUpon>DetalleVenta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modificaciones\Libros\AgregarCategoria.resx">
       <DependentUpon>AgregarCategoria.cs</DependentUpon>
     </EmbeddedResource>

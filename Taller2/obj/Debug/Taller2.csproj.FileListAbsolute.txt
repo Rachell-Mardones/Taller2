@@ -126,3 +126,4 @@ C:\Users\josse\Source\Repos\Rachell-Mardones\Taller2\Taller2\obj\Debug\Taller2.c
 C:\Users\josse\Source\Repos\Rachell-Mardones\Taller2\Taller2\obj\Debug\Taller2.csproj.CopyComplete
 C:\Users\josse\Source\Repos\Rachell-Mardones\Taller2\Taller2\obj\Debug\Taller2.exe
 C:\Users\josse\Source\Repos\Rachell-Mardones\Taller2\Taller2\obj\Debug\Taller2.pdb
+D:\Programas\Proyectos\Taller2\Taller2\obj\Debug\Taller2.DetalleVenta.resources
