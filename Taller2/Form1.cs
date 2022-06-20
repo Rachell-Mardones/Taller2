@@ -14,6 +14,8 @@ namespace Taller2
 {
     public partial class Form1 : Form
     {
+
+        
         public Form1()
         {
             InitializeComponent();
@@ -40,5 +42,7 @@ namespace Taller2
             this.Hide();
             f.Show();
         }
+       
+
     }
 }

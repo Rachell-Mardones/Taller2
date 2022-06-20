@@ -11,6 +11,11 @@ namespace WindowsFormsApp1{
 
         private MySqlConnection conexion;
 
+        public MySqlConnection getConexion()
+        {
+            return this.conexion;
+        }
+
         public ConexMySQL()
         {
 

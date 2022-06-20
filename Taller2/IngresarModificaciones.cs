@@ -12,6 +12,8 @@ namespace Taller2
 {
     public partial class IngresarModificaciones : Form
     {
+
+        
         public IngresarModificaciones()
         {
             InitializeComponent();
@@ -24,7 +26,7 @@ namespace Taller2
             if (clave != "123456")
             {
 
-                MessageBox.Show("Clave de administrador incorrecto ");
+                MessageBox.Show("Clave de administrador incorrecto.");
 
 
             }
@@ -44,6 +46,13 @@ namespace Taller2
             this.Hide();
             f.Show();
         }
+
+        private void IngresarModificaciones_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }
 

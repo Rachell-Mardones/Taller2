@@ -31,19 +31,17 @@ namespace Taller2
         {
             this.label2 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.Agregar_Cliente = new System.Windows.Forms.Button();
+            this.Nombre = new System.Windows.Forms.Label();
+            this.textNombre = new System.Windows.Forms.TextBox();
+            this.textRut = new System.Windows.Forms.TextBox();
+            this.Rut = new System.Windows.Forms.Label();
+            this.textSaldo = new System.Windows.Forms.TextBox();
+            this.Saldo = new System.Windows.Forms.Label();
+            this.textContraseña = new System.Windows.Forms.TextBox();
+            this.Contraseña = new System.Windows.Forms.Label();
+            this.textEmail = new System.Windows.Forms.TextBox();
+            this.Email = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
@@ -64,7 +62,7 @@ namespace Taller2
             this.button7.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.button7.Font = new System.Drawing.Font("Javanese Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.Location = new System.Drawing.Point(9, 328);
-            this.button7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(62, 28);
             this.button7.TabIndex = 17;
@@ -72,137 +70,121 @@ namespace Taller2
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button1
+            // Agregar_Cliente
             // 
-            this.button1.Location = new System.Drawing.Point(246, 322);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 25);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Agregar_Cliente.Location = new System.Drawing.Point(179, 287);
+            this.Agregar_Cliente.Name = "Agregar_Cliente";
+            this.Agregar_Cliente.Size = new System.Drawing.Size(100, 25);
+            this.Agregar_Cliente.TabIndex = 18;
+            this.Agregar_Cliente.Text = "Agregar";
+            this.Agregar_Cliente.UseVisualStyleBackColor = true;
+            this.Agregar_Cliente.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label1
+            // Nombre
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(277, 79);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Nombre";
+            this.Nombre.AutoSize = true;
+            this.Nombre.Location = new System.Drawing.Point(112, 99);
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Size = new System.Drawing.Size(44, 13);
+            this.Nombre.TabIndex = 19;
+            this.Nombre.Text = "Nombre";
             // 
-            // textBox1
+            // textNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(246, 95);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 20;
+            this.textNombre.Location = new System.Drawing.Point(179, 96);
+            this.textNombre.Name = "textNombre";
+            this.textNombre.Size = new System.Drawing.Size(189, 20);
+            this.textNombre.TabIndex = 20;
+            this.textNombre.TextChanged += new System.EventHandler(this.textNombre_TextChanged);
             // 
-            // textBox2
+            // textRut
             // 
-            this.textBox2.Location = new System.Drawing.Point(246, 134);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 22;
+            this.textRut.Location = new System.Drawing.Point(179, 131);
+            this.textRut.Name = "textRut";
+            this.textRut.Size = new System.Drawing.Size(100, 20);
+            this.textRut.TabIndex = 22;
             // 
-            // label3
+            // Rut
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(288, 118);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(24, 13);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "Rut";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.Rut.AutoSize = true;
+            this.Rut.Location = new System.Drawing.Point(112, 134);
+            this.Rut.Name = "Rut";
+            this.Rut.Size = new System.Drawing.Size(24, 13);
+            this.Rut.TabIndex = 21;
+            this.Rut.Text = "Rut";
+            this.Rut.Click += new System.EventHandler(this.label3_Click);
             // 
-            // textBox3
+            // textSaldo
             // 
-            this.textBox3.Location = new System.Drawing.Point(246, 173);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 24;
+            this.textSaldo.Location = new System.Drawing.Point(179, 171);
+            this.textSaldo.Name = "textSaldo";
+            this.textSaldo.Size = new System.Drawing.Size(100, 20);
+            this.textSaldo.TabIndex = 24;
+            this.textSaldo.TextChanged += new System.EventHandler(this.textSaldo_TextChanged);
             // 
-            // label4
+            // Saldo
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(278, 157);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 13);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "Saldo";
+            this.Saldo.AutoSize = true;
+            this.Saldo.Location = new System.Drawing.Point(112, 174);
+            this.Saldo.Name = "Saldo";
+            this.Saldo.Size = new System.Drawing.Size(34, 13);
+            this.Saldo.TabIndex = 23;
+            this.Saldo.Text = "Saldo";
             // 
-            // textBox4
+            // textContraseña
             // 
-            this.textBox4.Location = new System.Drawing.Point(246, 212);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 26;
+            this.textContraseña.Location = new System.Drawing.Point(179, 212);
+            this.textContraseña.Name = "textContraseña";
+            this.textContraseña.Size = new System.Drawing.Size(100, 20);
+            this.textContraseña.TabIndex = 26;
             // 
-            // label5
+            // Contraseña
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(260, 196);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 13);
-            this.label5.TabIndex = 25;
-            this.label5.Text = "Contraseña";
+            this.Contraseña.AutoSize = true;
+            this.Contraseña.Location = new System.Drawing.Point(112, 215);
+            this.Contraseña.Name = "Contraseña";
+            this.Contraseña.Size = new System.Drawing.Size(61, 13);
+            this.Contraseña.TabIndex = 25;
+            this.Contraseña.Text = "Contraseña";
             // 
-            // textBox5
+            // textEmail
             // 
-            this.textBox5.Location = new System.Drawing.Point(246, 251);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 28;
+            this.textEmail.Location = new System.Drawing.Point(179, 251);
+            this.textEmail.Name = "textEmail";
+            this.textEmail.Size = new System.Drawing.Size(189, 20);
+            this.textEmail.TabIndex = 28;
             // 
-            // label6
+            // Email
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(277, 235);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(32, 13);
-            this.label6.TabIndex = 27;
-            this.label6.Text = "Email";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(246, 290);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 30;
-            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(272, 274);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(40, 13);
-            this.label7.TabIndex = 29;
-            this.label7.Text = "Estado";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
+            this.Email.AutoSize = true;
+            this.Email.Location = new System.Drawing.Point(112, 254);
+            this.Email.Name = "Email";
+            this.Email.Size = new System.Drawing.Size(32, 13);
+            this.Email.TabIndex = 27;
+            this.Email.Text = "Email";
             // 
             // AgregarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textEmail);
+            this.Controls.Add(this.Email);
+            this.Controls.Add(this.textContraseña);
+            this.Controls.Add(this.Contraseña);
+            this.Controls.Add(this.textSaldo);
+            this.Controls.Add(this.Saldo);
+            this.Controls.Add(this.textRut);
+            this.Controls.Add(this.Rut);
+            this.Controls.Add(this.textNombre);
+            this.Controls.Add(this.Nombre);
+            this.Controls.Add(this.Agregar_Cliente);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AgregarCliente";
             this.Text = "AgregarCliente";
+            this.Load += new System.EventHandler(this.AgregarCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,18 +194,16 @@ namespace Taller2
 
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button Agregar_Cliente;
+        private System.Windows.Forms.Label Nombre;
+        private System.Windows.Forms.TextBox textNombre;
+        private System.Windows.Forms.TextBox textRut;
+        private System.Windows.Forms.Label Rut;
+        private System.Windows.Forms.TextBox textSaldo;
+        private System.Windows.Forms.Label Saldo;
+        private System.Windows.Forms.TextBox textContraseña;
+        private System.Windows.Forms.Label Contraseña;
+        private System.Windows.Forms.TextBox textEmail;
+        private System.Windows.Forms.Label Email;
     }
 }
