@@ -52,6 +52,8 @@ namespace Taller2
             this.descuento = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.listacategorias = new System.Windows.Forms.ComboBox();
+            this.nombre = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -91,7 +93,7 @@ namespace Taller2
             // l
             // 
             this.l.AutoSize = true;
-            this.l.Location = new System.Drawing.Point(89, 128);
+            this.l.Location = new System.Drawing.Point(89, 163);
             this.l.Name = "l";
             this.l.Size = new System.Drawing.Size(32, 13);
             this.l.TabIndex = 22;
@@ -100,7 +102,7 @@ namespace Taller2
             // ñ
             // 
             this.ñ.AutoSize = true;
-            this.ñ.Location = new System.Drawing.Point(89, 167);
+            this.ñ.Location = new System.Drawing.Point(89, 202);
             this.ñ.Name = "ñ";
             this.ñ.Size = new System.Drawing.Size(44, 13);
             this.ñ.TabIndex = 23;
@@ -116,21 +118,21 @@ namespace Taller2
             // autor
             // 
             this.autor.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.autor.Location = new System.Drawing.Point(157, 125);
+            this.autor.Location = new System.Drawing.Point(157, 160);
             this.autor.Name = "autor";
             this.autor.Size = new System.Drawing.Size(100, 20);
             this.autor.TabIndex = 25;
             // 
             // editorial
             // 
-            this.editorial.Location = new System.Drawing.Point(157, 164);
+            this.editorial.Location = new System.Drawing.Point(157, 199);
             this.editorial.Name = "editorial";
             this.editorial.Size = new System.Drawing.Size(100, 20);
             this.editorial.TabIndex = 26;
             // 
             // BotonInsertarLibro
             // 
-            this.BotonInsertarLibro.Location = new System.Drawing.Point(285, 279);
+            this.BotonInsertarLibro.Location = new System.Drawing.Point(300, 314);
             this.BotonInsertarLibro.Margin = new System.Windows.Forms.Padding(2);
             this.BotonInsertarLibro.Name = "BotonInsertarLibro";
             this.BotonInsertarLibro.Size = new System.Drawing.Size(64, 26);
@@ -142,7 +144,7 @@ namespace Taller2
             // u
             // 
             this.u.AutoSize = true;
-            this.u.Location = new System.Drawing.Point(89, 209);
+            this.u.Location = new System.Drawing.Point(89, 244);
             this.u.Name = "u";
             this.u.Size = new System.Drawing.Size(26, 13);
             this.u.TabIndex = 28;
@@ -150,7 +152,7 @@ namespace Taller2
             // 
             // anio
             // 
-            this.anio.Location = new System.Drawing.Point(157, 206);
+            this.anio.Location = new System.Drawing.Point(157, 241);
             this.anio.Name = "anio";
             this.anio.Size = new System.Drawing.Size(100, 20);
             this.anio.TabIndex = 29;
@@ -158,7 +160,7 @@ namespace Taller2
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(89, 253);
+            this.label2.Location = new System.Drawing.Point(89, 288);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 30;
@@ -166,7 +168,7 @@ namespace Taller2
             // 
             // idioma
             // 
-            this.idioma.Location = new System.Drawing.Point(157, 250);
+            this.idioma.Location = new System.Drawing.Point(157, 285);
             this.idioma.Name = "idioma";
             this.idioma.Size = new System.Drawing.Size(100, 20);
             this.idioma.TabIndex = 31;
@@ -251,12 +253,34 @@ namespace Taller2
             this.listacategorias.Name = "listacategorias";
             this.listacategorias.Size = new System.Drawing.Size(100, 21);
             this.listacategorias.TabIndex = 41;
+            this.listacategorias.SelectedIndexChanged += new System.EventHandler(this.listacategorias_SelectedIndexChanged);
+            // 
+            // nombre
+            // 
+            this.nombre.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.nombre.Location = new System.Drawing.Point(157, 121);
+            this.nombre.Name = "nombre";
+            this.nombre.Size = new System.Drawing.Size(100, 20);
+            this.nombre.TabIndex = 43;
+            this.nombre.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(89, 124);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(44, 13);
+            this.label8.TabIndex = 42;
+            this.label8.Text = "Nombre";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // InsertarLibro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.nombre);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.listacategorias);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.descuento);
@@ -314,5 +338,7 @@ namespace Taller2
         private System.Windows.Forms.TextBox descuento;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox listacategorias;
+        private System.Windows.Forms.TextBox nombre;
+        private System.Windows.Forms.Label label8;
     }
 }

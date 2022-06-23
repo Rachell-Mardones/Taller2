@@ -70,7 +70,7 @@ namespace Taller2
             this.button7.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.button7.Font = new System.Drawing.Font("Javanese Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.Location = new System.Drawing.Point(11, 344);
-            this.button7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(62, 28);
             this.button7.TabIndex = 23;
@@ -95,6 +95,7 @@ namespace Taller2
             this.dato.Name = "dato";
             this.dato.Size = new System.Drawing.Size(676, 157);
             this.dato.TabIndex = 37;
+            this.dato.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dato_CellContentClick);
             // 
             // label3
             // 
@@ -112,6 +113,7 @@ namespace Taller2
             this.cboCategoriaLibro.Name = "cboCategoriaLibro";
             this.cboCategoriaLibro.Size = new System.Drawing.Size(148, 21);
             this.cboCategoriaLibro.TabIndex = 39;
+            this.cboCategoriaLibro.SelectedIndexChanged += new System.EventHandler(this.cboCategoriaLibro_SelectedIndexChanged);
             // 
             // ListadoLibrosPromocion_22_
             // 
@@ -125,7 +127,7 @@ namespace Taller2
             this.Controls.Add(this.button7);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ListadoLibrosPromocion_22_";
             this.Text = "ListadoLibrosPromocion_22_";
             this.Load += new System.EventHandler(this.ListadoLibrosPromocion_22__Load);

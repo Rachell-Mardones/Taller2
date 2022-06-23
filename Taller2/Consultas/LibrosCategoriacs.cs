@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1;
+using MySql.Data.MySqlClient;
 
 namespace Taller2
 {
@@ -22,6 +24,12 @@ namespace Taller2
             Libro2 f = new Libro2();
             this.Hide();
             f.Show();
+        }
+
+        
+        private void LibrosCategoriacs_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

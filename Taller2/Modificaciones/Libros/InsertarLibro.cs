@@ -34,7 +34,7 @@ namespace Taller2
             DataTable categorias = conex.selectQuery(c);
             for (int i = 0; i < categorias.Rows.Count; i++)
             {
-                listacategorias.Items.Add(categorias.Rows[i]["Nombre"]);
+                listacategorias.Items.Add(categorias.Rows[i]["NombreCategoria"]);
             }
         }
 
@@ -43,13 +43,13 @@ namespace Taller2
             ConexMySQL conex = new ConexMySQL();
             conex.open();
 
-            string insertar = "INSERT INTO Libro( ISBN, Autor, Editorial, Anio, Idioma, Reseña, PrecioNeto, CantidadStock, PorcentajeDescuento) VALUES ( '"+isbn.Text+"', '"+autor.Text+"', '"+editorial.Text+"', '"+anio.Text+"', '"+idioma.Text+"', '"+reseña.Text+"', '"+precioneto.Text+"', '"+stock.Text+"', '"+descuento.Text+"')";
+            string insertar = "INSERT INTO Libro( ISBN, Nombre, Autor, Editorial, Anio, Idioma, Reseña, PrecioNeto, CantidadStock, PorcentajeDescuento) VALUES ( '"+isbn.Text+ "','" + nombre.Text + "', '" + autor.Text+"', '"+editorial.Text+"', '"+anio.Text+"', '"+idioma.Text+"', '"+reseña.Text+"', "+precioneto.Text+", "+stock.Text+", "+descuento.Text+")";
             int x = conex.executeNonQuery(insertar);
 
 
-            string categoria = "SELECT ID FROM Categoria WHERE Nombre ='" + listacategorias.Text+"'";
+            string categoria = "SELECT ID FROM Categoria WHERE NombreCategoria ='" + listacategorias.Text+"'";
             string codigocategoria = conex.selectQueryScalar(categoria);
-            string insertarcategoria = "INSERT INTO Libro_Categoria(LibroISBN, CategoriaID) VALUES ('"+isbn.Text+"', '"+codigocategoria+"')";
+            string insertarcategoria = "INSERT INTO Libro_Categoria(LibroISBN, CategoriaID) VALUES ('"+isbn.Text+"', "+codigocategoria+")";
             int y = conex.executeNonQuery(insertarcategoria);
             if (y == 1)
             {
@@ -63,6 +63,19 @@ namespace Taller2
             conex.close();
         }
 
-        
+        private void listacategorias_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

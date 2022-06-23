@@ -31,7 +31,10 @@ namespace Taller2
         {
             this.label2 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnVerLibros = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cboCatLibros = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -52,7 +55,7 @@ namespace Taller2
             this.button7.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.button7.Font = new System.Drawing.Font("Javanese Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.Location = new System.Drawing.Point(9, 328);
-            this.button7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(62, 28);
             this.button7.TabIndex = 23;
@@ -60,30 +63,49 @@ namespace Taller2
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button1
+            // btnVerLibros
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.button1.Font = new System.Drawing.Font("Javanese Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(269, 169);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(62, 28);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "Atrás";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnVerLibros.Location = new System.Drawing.Point(364, 103);
+            this.btnVerLibros.Name = "btnVerLibros";
+            this.btnVerLibros.Size = new System.Drawing.Size(75, 23);
+            this.btnVerLibros.TabIndex = 29;
+            this.btnVerLibros.Text = "Ver Libros";
+            this.btnVerLibros.UseVisualStyleBackColor = true;
+            this.btnVerLibros.Click += new System.EventHandler(this.CboVerLibros_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(43, 132);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(516, 167);
+            this.dataGridView1.TabIndex = 28;
+            // 
+            // cboCatLibros
+            // 
+            this.cboCatLibros.FormattingEnabled = true;
+            this.cboCatLibros.Location = new System.Drawing.Point(228, 105);
+            this.cboCatLibros.Name = "cboCatLibros";
+            this.cboCatLibros.Size = new System.Drawing.Size(121, 21);
+            this.cboCatLibros.TabIndex = 27;
+            this.cboCatLibros.SelectedIndexChanged += new System.EventHandler(this.cboCatLibros_SelectedIndexChanged);
             // 
             // LibrosPorCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnVerLibros);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.cboCatLibros);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LibrosPorCategoria";
             this.Text = "LibrosPorCategoria";
             this.Load += new System.EventHandler(this.LibrosPorCategoria_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -93,6 +115,8 @@ namespace Taller2
 
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnVerLibros;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox cboCatLibros;
     }
 }

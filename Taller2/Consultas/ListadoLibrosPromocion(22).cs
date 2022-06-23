@@ -83,5 +83,15 @@ namespace Taller2
                 cboCategoriaLibro.Items.Add(tablaLibro.Rows[i]["categoria"]);
             }
         }
+
+        private void cboCategoriaLibro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void dato_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
