@@ -26,48 +26,30 @@ namespace Taller2
             f.Show();
         }
 
-        public void mostrarDato(string categoria)
-        {
-            MySqlDataAdapter adapt;
-            ConexMySQL conex = new ConexMySQL();
-            conex.open();
-            DataTable dt = new DataTable();
-           
-            if (categoria == null)
-            {
-                adapt = new MySqlDataAdapter("Select * from libro;", conex.getConexion());
-            }
-            else
-            {
-                adapt = new MySqlDataAdapter("Select * from libro where libro.isbn=" + "'" + categoria + "';", conex.getConexion());
-            }
-            adapt.Fill(dt);
-            dato.DataSource = dt;
-            conex.close();
-
-        }
-
+        
         private void verLibros_Click(object sender, EventArgs e)
         {
+
             if (cboCategoriaLibro.Text != "")
             {
-                string codCliente = "";               
+                string query = "";
+
                 ConexMySQL conex = new ConexMySQL();
                 conex.open();
                 try
                 {
-                    string query = "SELECT isbn, titulo, categoria from libro where categoria = '" + cboCategoriaLibro.Text + "'";
-                    codCliente = conex.selectQueryScalar(query);
+                    string queryAutor = "SELECT nombreCategoria FROM Categoria WHERE nombreCategoria = '" + cboCategoriaLibro.Text + "'";
+                    query = conex.selectQueryScalar(queryAutor);
                 }
                 catch (Exception error)
                 {
                     string error1 = error.ToString();
-                    
-                }
-                string query2 = "SELECT categoria, libro from libro";               
-                DataTable tabla = conex.selectQuery(query2);
-                dato.DataSource = tabla;
 
+                }
+                string queryFinal = "select l.isbn, l.nombre, l.autor, l.PorcentajeDescuento from libro as l inner join libro_categoria as lc on l.ISBN = lc.LibroISBN inner join categoria as c on lc.CategoriaID = c.ID where c.nombreCategoria = '" + query + "' and PorcentajeDescuento > 0";
+                //string queryFinal = "SELECT nombre FROM Libro WHERE autor = '" + query + "'";
+                DataTable tabla = conex.selectQuery(queryFinal);
+                dato.DataSource = tabla;
             }
 
         }
@@ -76,11 +58,11 @@ namespace Taller2
         {
             ConexMySQL conex = new ConexMySQL();
             conex.open();
-            string queryCboLibroPromocion = "SELECT categoria FROM Libro";
+            string queryCboLibroPromocion = "SELECT nombreCategoria FROM Categoria";
             DataTable tablaLibro = conex.selectQuery(queryCboLibroPromocion);
             for (int i = 0; i < tablaLibro.Rows.Count; i++)
             {
-                cboCategoriaLibro.Items.Add(tablaLibro.Rows[i]["categoria"]);
+                cboCategoriaLibro.Items.Add(tablaLibro.Rows[i]["nombreCategoria"]);
             }
         }
 

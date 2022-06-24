@@ -61,5 +61,12 @@ namespace Taller2
         {
 
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Libro f = new Libro();
+            this.Hide();
+            f.Show();
+        }
     }
 }

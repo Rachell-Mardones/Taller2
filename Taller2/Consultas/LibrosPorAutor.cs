@@ -44,7 +44,7 @@ namespace Taller2
                     
                 }
                               
-                string queryFinal = "SELECT nombre FROM LIBRO WHERE autor = '" + query + "'";
+                string queryFinal = "SELECT isbn, nombre, editorial FROM LIBRO WHERE autor = '" + query + "'";
                 DataTable tabla = conex.selectQuery(queryFinal);
                 dataGridView1.DataSource = tabla;
             }

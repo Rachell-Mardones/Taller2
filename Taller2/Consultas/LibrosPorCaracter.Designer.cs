@@ -33,6 +33,7 @@ namespace Taller2
             this.button7 = new System.Windows.Forms.Button();
             this.dataGrid = new System.Windows.Forms.DataGridView();
             this.textCaracter = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +55,7 @@ namespace Taller2
             this.button7.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.button7.Font = new System.Drawing.Font("Javanese Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.Location = new System.Drawing.Point(9, 328);
-            this.button7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(62, 28);
             this.button7.TabIndex = 23;
@@ -73,22 +74,32 @@ namespace Taller2
             // 
             // textCaracter
             // 
-            this.textCaracter.Location = new System.Drawing.Point(242, 111);
+            this.textCaracter.Location = new System.Drawing.Point(183, 111);
             this.textCaracter.Name = "textCaracter";
             this.textCaracter.Size = new System.Drawing.Size(100, 20);
             this.textCaracter.TabIndex = 25;
             this.textCaracter.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(74, 114);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(103, 13);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Buscar por caracter:";
             // 
             // LibrosPorCaracter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.textCaracter);
             this.Controls.Add(this.dataGrid);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LibrosPorCaracter";
             this.Text = "LibrosPorCaracter";
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
@@ -103,5 +114,6 @@ namespace Taller2
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.DataGridView dataGrid;
         private System.Windows.Forms.TextBox textCaracter;
+        private System.Windows.Forms.Label label1;
     }
 }

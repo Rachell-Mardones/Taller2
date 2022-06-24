@@ -34,6 +34,7 @@ namespace Taller2
             this.btnVerLibros = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.cboAutores = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,7 +66,7 @@ namespace Taller2
             // 
             // btnVerLibros
             // 
-            this.btnVerLibros.Location = new System.Drawing.Point(363, 85);
+            this.btnVerLibros.Location = new System.Drawing.Point(331, 138);
             this.btnVerLibros.Name = "btnVerLibros";
             this.btnVerLibros.Size = new System.Drawing.Size(75, 23);
             this.btnVerLibros.TabIndex = 32;
@@ -76,25 +77,35 @@ namespace Taller2
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(42, 114);
+            this.dataGridView1.Location = new System.Drawing.Point(52, 167);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(516, 167);
+            this.dataGridView1.Size = new System.Drawing.Size(510, 126);
             this.dataGridView1.TabIndex = 31;
             // 
             // cboAutores
             // 
             this.cboAutores.FormattingEnabled = true;
-            this.cboAutores.Location = new System.Drawing.Point(227, 87);
+            this.cboAutores.Location = new System.Drawing.Point(204, 140);
             this.cboAutores.Name = "cboAutores";
             this.cboAutores.Size = new System.Drawing.Size(121, 21);
             this.cboAutores.TabIndex = 30;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(201, 124);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.TabIndex = 33;
+            this.label1.Text = "Autor Libro";
             // 
             // LibrosPorAutor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnVerLibros);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.cboAutores);
@@ -117,5 +128,6 @@ namespace Taller2
         private System.Windows.Forms.Button btnVerLibros;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox cboAutores;
+        private System.Windows.Forms.Label label1;
     }
 }

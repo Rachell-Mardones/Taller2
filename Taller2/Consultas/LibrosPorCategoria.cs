@@ -54,7 +54,7 @@ namespace Taller2
                     string error1 = error.ToString();
 
                 }
-                string queryFinal = "select l.nombre from libro as l inner join libro_categoria as lc on l.ISBN = lc.LibroISBN inner join categoria as c on lc.CategoriaID = c.ID where c.nombreCategoria = '" + query + "'";
+                string queryFinal = "select l.isbn, l.nombre, l.autor from libro as l inner join libro_categoria as lc on l.ISBN = lc.LibroISBN inner join categoria as c on lc.CategoriaID = c.ID where c.nombreCategoria = '" + query + "'";
                 //string queryFinal = "SELECT nombre FROM Libro WHERE autor = '" + query + "'";
                 DataTable tabla = conex.selectQuery(queryFinal);
                 dataGridView1.DataSource = tabla;

@@ -80,7 +80,7 @@ namespace Taller2
             // 
             // verLibros
             // 
-            this.verLibros.Location = new System.Drawing.Point(274, 133);
+            this.verLibros.Location = new System.Drawing.Point(405, 146);
             this.verLibros.Name = "verLibros";
             this.verLibros.Size = new System.Drawing.Size(59, 21);
             this.verLibros.TabIndex = 38;
@@ -91,16 +91,16 @@ namespace Taller2
             // dato
             // 
             this.dato.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dato.Location = new System.Drawing.Point(11, 160);
+            this.dato.Location = new System.Drawing.Point(96, 173);
             this.dato.Name = "dato";
-            this.dato.Size = new System.Drawing.Size(676, 157);
+            this.dato.Size = new System.Drawing.Size(523, 166);
             this.dato.TabIndex = 37;
             this.dato.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dato_CellContentClick);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 136);
+            this.label3.Location = new System.Drawing.Point(248, 131);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 13);
             this.label3.TabIndex = 40;
@@ -109,7 +109,7 @@ namespace Taller2
             // cboCategoriaLibro
             // 
             this.cboCategoriaLibro.FormattingEnabled = true;
-            this.cboCategoriaLibro.Location = new System.Drawing.Point(120, 133);
+            this.cboCategoriaLibro.Location = new System.Drawing.Point(251, 147);
             this.cboCategoriaLibro.Name = "cboCategoriaLibro";
             this.cboCategoriaLibro.Size = new System.Drawing.Size(148, 21);
             this.cboCategoriaLibro.TabIndex = 39;
