@@ -66,7 +66,7 @@ namespace Taller2
             // 
             // btnVerLibros
             // 
-            this.btnVerLibros.Location = new System.Drawing.Point(338, 137);
+            this.btnVerLibros.Location = new System.Drawing.Point(198, 137);
             this.btnVerLibros.Name = "btnVerLibros";
             this.btnVerLibros.Size = new System.Drawing.Size(75, 23);
             this.btnVerLibros.TabIndex = 29;
@@ -86,7 +86,7 @@ namespace Taller2
             // cboCatLibros
             // 
             this.cboCatLibros.FormattingEnabled = true;
-            this.cboCatLibros.Location = new System.Drawing.Point(202, 139);
+            this.cboCatLibros.Location = new System.Drawing.Point(71, 139);
             this.cboCatLibros.Name = "cboCatLibros";
             this.cboCatLibros.Size = new System.Drawing.Size(121, 21);
             this.cboCatLibros.TabIndex = 27;
@@ -95,7 +95,7 @@ namespace Taller2
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(199, 123);
+            this.label1.Location = new System.Drawing.Point(68, 123);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 13);
             this.label1.TabIndex = 30;
