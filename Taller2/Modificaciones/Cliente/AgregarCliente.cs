@@ -46,12 +46,13 @@ namespace Taller2
                 String contraseña = textContraseña.Text;
                 String email= textEmail.Text;
                 Boolean estado = true;
+                int descuento = 0;
 
                 if (estado)
                 {                
                     if(nombre != "" && rut != "" && saldo > 0 && contraseña != "" && email != "" )
                     {
-                        string query = "INSERT INTO cliente (rut,nombre,saldo,contraseña,email,estado) values(@rut,@nombre,@saldo,@contraseña,@email,@estado)";
+                        string query = "INSERT INTO cliente (rut,nombre,saldo,contraseña,email,estado,descuento) values(@rut,@nombre,@saldo,@contraseña,@email,@estado,@descuento)";
             
                         ConexMySQL conex = new ConexMySQL();
                         conex.open();
@@ -64,8 +65,9 @@ namespace Taller2
                         cmd.Parameters.AddWithValue("@contraseña", textContraseña.Text);
                         cmd.Parameters.AddWithValue("@email", textEmail.Text);
                         cmd.Parameters.AddWithValue("@estado", true);
-                    
-                                
+                        cmd.Parameters.AddWithValue("@descuento", 0);
+
+
                         MySqlCommand cmd2 = new MySqlCommand("Select rut from cliente Where rut = @Aux", conex.getConexion());
             
                         cmd2.Parameters.AddWithValue("@Aux", textRut.Text);
