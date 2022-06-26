@@ -88,12 +88,12 @@ namespace Taller2
             conex.close();
 
         }
-        private void verDireccion_Click(object sender, EventArgs e)
+        private void verLibros_Click(object sender, EventArgs e)
         {
             mostrarDato(null);
         }
 
-        private void verLibros_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

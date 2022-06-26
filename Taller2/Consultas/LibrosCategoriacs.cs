@@ -61,7 +61,7 @@ namespace Taller2
                     string queryCategoria = "SELECT nombreCategoria FROM Categoria WHERE nombreCategoria = '" + cboNombreCategoria.Text + "'";
                     query1 = conex.selectQueryScalar(queryCategoria);
 
-                    string queryCliente = "SELECT Comprador FROM venta WHERE comprador = '" + cboNombreCliente.Text + "'";
+                    string queryCliente = "SELECT distinct Comprador FROM venta WHERE comprador = '" + cboNombreCliente.Text + "'";
                     query2 = conex.selectQueryScalar(queryCliente);
                 }
                 catch (Exception error)

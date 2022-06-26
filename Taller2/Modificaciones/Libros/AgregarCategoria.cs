@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1;
+using MySql.Data.MySqlClient;
 using System.Text.RegularExpressions;
 
 namespace Taller2
@@ -30,16 +31,55 @@ namespace Taller2
         {
             ConexMySQL conex = new ConexMySQL();
             conex.open();
-            
-            string buscar = "SELECT Nombre FROM Categoria WHERE Nombre ='" + NombreCategoria.Text + "'";
-            string categoriaencontrada = conex.selectQueryScalar(buscar);
-            string nombre = NombreCategoria.Text;
-            string baseSinTildes = Regex.Replace(categoriaencontrada.Normalize(NormalizationForm.FormD), @"[^a-zA-z0-9 ]+", "");
-            string ingresadaSinTildes = Regex.Replace(nombre.Normalize(NormalizationForm.FormD), @"[^a-zA-z0-9 ]+", "");
+
+            String categoria = NombreCategoria.Text;
+
+
+
+            if (categoria != "")
+            {
+
+                string query = "INSERT INTO Categoria (nombre) values('" + NombreCategoria.Text + "')"; 
+
+                MySqlCommand cmd = new MySqlCommand(query, conex.getConexion());
+
+                cmd.Parameters.AddWithValue("@nombre", NombreCategoria.Text);
+                               
+
+                try
+                {
+                    MySqlCommand comando = new MySqlCommand(query, conex.getConexion());
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Categoria agregada.");
+
+                }
+                catch (MySqlException ex)
+                {
+
+                    MessageBox.Show("Error al guardar: " + ex.Message);
+
+                }
+                finally
+                {
+                    conex.close();
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe completar todos los campos");
+            }
+
+
+            /*  string categoriaencontrada = conex.selectQueryScalar(query);
+                string nombre = NombreCategoria.Text;
+                string baseSinTildes = Regex.Replace(categoriaencontrada.Normalize(NormalizationForm.FormD), @"[^a-zA-z0-9 ]+", "");
+                string ingresadaSinTildes = Regex.Replace(nombre.Normalize(NormalizationForm.FormD), @"[^a-zA-z0-9 ]+", "");
+
             if (String.Equals(ingresadaSinTildes, baseSinTildes, StringComparison.OrdinalIgnoreCase))
             {
                 
-                MessageBox.Show("Esta categoria ya esta ingresada");
+                MessageBox.Show("Esta categoria ya está ingresada.");
             }
             else
             {
@@ -47,12 +87,12 @@ namespace Taller2
                 int x = conex.executeNonQuery(agregar);
                 if (x == 1)
                 {
-                    MessageBox.Show("Se ingreso exitosamente");
+                    MessageBox.Show("Se ingresó exitosamente.");
                 }
                 conex.close();
-            }
-            
-            
+            }*/
+
+
         }
     }
 }

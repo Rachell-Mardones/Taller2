@@ -50,7 +50,7 @@ namespace Taller2
 
                 if (estado)
                 {                
-                    if(nombre != "" && rut != "" && saldo > 0 && contraseña != "" && email != "" )
+                    if(nombre != "" && rut != "" && saldo >= 0 && contraseña != "" && email != "" )
                     {
                         string query = "INSERT INTO cliente (rut,nombre,saldo,contraseña,email,estado,descuento) values(@rut,@nombre,@saldo,@contraseña,@email,@estado,@descuento)";
             

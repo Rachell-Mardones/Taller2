@@ -50,7 +50,7 @@ namespace Taller2
 
                 }
                                 
-                string queryFinal = "select distinct c.nombre, c.email, c.saldo, SUM(dv.TotalAPagar), v.fecha from cliente as c inner join venta as v on c.Rut = v.ClienteRut inner join detalledeventa as dv on v.ID = dv.VentaID where Rut = '" + query1 + "' and v.fecha >= date_sub(NOW(), INTERVAL 3 month)";
+                string queryFinal = "select distinct c.Nombre, c.Email, c.Saldo, SUM(dv.TotalAPagar) as 'Monto Total' from cliente as c inner join venta as v on c.Rut = v.ClienteRut inner join detalledeventa as dv on v.ID = dv.VentaID where Rut = '" + query1 + "' and v.fecha >= date_sub(NOW(), INTERVAL 3 month)";
                 DataTable tabla = conex.selectQuery(queryFinal);
                 dataGridView1.DataSource = tabla;
             }

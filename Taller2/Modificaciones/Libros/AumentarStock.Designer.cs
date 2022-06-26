@@ -58,7 +58,7 @@ namespace Taller2
             this.button7.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.button7.Font = new System.Drawing.Font("Javanese Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.Location = new System.Drawing.Point(9, 328);
-            this.button7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(62, 28);
             this.button7.TabIndex = 20;
@@ -115,9 +115,10 @@ namespace Taller2
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(270, 250);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 13);
+            this.label2.Size = new System.Drawing.Size(71, 13);
             this.label2.TabIndex = 38;
-            this.label2.Text = "Nombre del libro";
+            this.label2.Text = "ISBN del libro";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // cboISBNLibro
             // 
@@ -141,7 +142,7 @@ namespace Taller2
             this.Controls.Add(this.cboISBNLibro);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AumentarStock";
             this.Text = "AumentarStock";
             this.Load += new System.EventHandler(this.AumentarStock_Load);
