@@ -34,32 +34,28 @@ namespace Taller2
             DataTable categorias = conex.selectQuery(c);
             for (int i = 0; i < categorias.Rows.Count; i++)
             {
-                listacategorias.Items.Add(categorias.Rows[i]["NombreCategoria"]);
+                listacategorias.Items.Add(categorias.Rows[i]["Nombre"]);
             }
         }
 
         private void BotonInsertarLibro_Click(object sender, EventArgs e)
         {
+            
             ConexMySQL conex = new ConexMySQL();
             conex.open();
 
-            string insertar = "INSERT INTO Libro( ISBN, Nombre, Autor, Editorial, Anio, Idioma, Reseña, PrecioNeto, CantidadStock, PorcentajeDescuento) VALUES ( '"+isbn.Text+ "','" + nombre.Text + "', '" + autor.Text+"', '"+editorial.Text+"', '"+anio.Text+"', '"+idioma.Text+"', '"+reseña.Text+"', "+precioneto.Text+", "+stock.Text+", "+descuento.Text+")";
+
+            string insertar = "INSERT INTO Libro(ISBN, Nombre, Autor, Editorial, Anio, Idioma, Reseña, PrecioNeto, CantidadStock, PorcentajeDescuento) VALUES ('"+isbn.Text+"', '"+nombre.Text+"', '"+autor.Text+"', '"+editorial.Text+"', '"+anio.Text+"', '"+idioma.Text+"', '"+reseña.Text+"', '"+precioneto.Text+"', '"+stock.Text+"', '"+descuento.Text+"')";
             int x = conex.executeNonQuery(insertar);
-
-
-            string categoria = "SELECT ID FROM Categoria WHERE NombreCategoria ='" + listacategorias.Text+"'";
-            string codigocategoria = conex.selectQueryScalar(categoria);
-            string insertarcategoria = "INSERT INTO Libro_Categoria(LibroISBN, CategoriaID) VALUES ('"+isbn.Text+"', "+codigocategoria+")";
-            int y = conex.executeNonQuery(insertarcategoria);
-            if (y == 1)
+            if (x == 1)
             {
                 MessageBox.Show("se ingreso exitosamente");
             }
             else
             {
                 MessageBox.Show("no se agrego");
-            }
-
+            }       
+           
             conex.close();
         }
 
@@ -77,5 +73,37 @@ namespace Taller2
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cuadrocategorias_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void BotonAgregarCategoria_Click_1(object sender, EventArgs e)
+        {
+            ConexMySQL conex = new ConexMySQL();
+            conex.open();
+
+            //falta restriccion para que ingrese un tipo de categoria una sola vez
+            string id = "SELECT ID FROM Categoria WHERE Nombre ='" + listacategorias.Text + "'";
+            string categoriaencontrada = conex.selectQueryScalar(id);
+            
+            
+            string insertarcategoria = "INSERT INTO Libro_Categoria(LibroISBN, CategoriaID) VALUES ('" + isbn.Text + "', '" + categoriaencontrada + "')";
+
+
+
+            //Imprimir las categorias que se ingresan en el recuadro
+            cuadrocategorias.Text += listacategorias.Text + "\r\n";
+
+            conex.close();
+        }
+
+        
     }
 }

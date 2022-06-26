@@ -39,6 +39,8 @@ namespace Taller2
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.ingresardatosventa = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.hora = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label2
@@ -69,7 +71,7 @@ namespace Taller2
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(84, 174);
+            this.label1.Location = new System.Drawing.Point(85, 150);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 17);
@@ -78,8 +80,8 @@ namespace Taller2
             // 
             // rutcliente
             // 
-            this.rutcliente.Location = new System.Drawing.Point(223, 174);
-            this.rutcliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rutcliente.Location = new System.Drawing.Point(223, 147);
+            this.rutcliente.Margin = new System.Windows.Forms.Padding(4);
             this.rutcliente.Name = "rutcliente";
             this.rutcliente.Size = new System.Drawing.Size(132, 22);
             this.rutcliente.TabIndex = 25;
@@ -87,7 +89,7 @@ namespace Taller2
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(87, 234);
+            this.label4.Location = new System.Drawing.Point(85, 217);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 17);
@@ -96,16 +98,16 @@ namespace Taller2
             // 
             // rutvendedor
             // 
-            this.rutvendedor.Location = new System.Drawing.Point(223, 230);
-            this.rutvendedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rutvendedor.Location = new System.Drawing.Point(223, 214);
+            this.rutvendedor.Margin = new System.Windows.Forms.Padding(4);
             this.rutvendedor.Name = "rutvendedor";
             this.rutvendedor.Size = new System.Drawing.Size(132, 22);
             this.rutvendedor.TabIndex = 29;
             // 
             // fecha
             // 
-            this.fecha.Location = new System.Drawing.Point(223, 302);
-            this.fecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fecha.Location = new System.Drawing.Point(223, 288);
+            this.fecha.Margin = new System.Windows.Forms.Padding(4);
             this.fecha.Name = "fecha";
             this.fecha.Size = new System.Drawing.Size(132, 22);
             this.fecha.TabIndex = 30;
@@ -113,7 +115,7 @@ namespace Taller2
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(91, 308);
+            this.label5.Location = new System.Drawing.Point(89, 291);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(47, 17);
@@ -144,11 +146,31 @@ namespace Taller2
             this.ingresardatosventa.UseVisualStyleBackColor = false;
             this.ingresardatosventa.Click += new System.EventHandler(this.ingresardatosventa_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(89, 358);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(39, 17);
+            this.label3.TabIndex = 34;
+            this.label3.Text = "Hora";
+            // 
+            // hora
+            // 
+            this.hora.Location = new System.Drawing.Point(223, 355);
+            this.hora.Margin = new System.Windows.Forms.Padding(4);
+            this.hora.Name = "hora";
+            this.hora.Size = new System.Drawing.Size(132, 22);
+            this.hora.TabIndex = 35;
+            // 
             // RealizarVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(995, 450);
+            this.Controls.Add(this.hora);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.ingresardatosventa);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -180,5 +202,7 @@ namespace Taller2
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button ingresardatosventa;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox hora;
     }
 }

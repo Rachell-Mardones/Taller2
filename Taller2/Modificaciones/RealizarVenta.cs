@@ -29,7 +29,17 @@ namespace Taller2
         private void RealizarVenta_Load(object sender, EventArgs e)
         {
             fecha.ReadOnly = true;
-            fecha.Text = DateTime.Now.ToString("dd/MM/yyyy") + " / " + DateTime.Now.ToString("HH:mm");
+            hora.ReadOnly = true;
+            fecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            hora.Text = DateTime.Now.ToString("HH:mm");
+
+
+            ConexMySQL conex = new ConexMySQL();
+            conex.open();
+            string s = "SELECT STR_TO_DATE('" + fecha.Text + "', '%e %M %Y')";
+            string q = conex.selectQueryScalar(s);
+            MessageBox.Show(q);
+
         }
 
         private void ingresardatosventa_Click(object sender, EventArgs e)
@@ -39,30 +49,39 @@ namespace Taller2
             ConexMySQL conex = new ConexMySQL();
             conex.open();
 
+
             
 
-            string cliente = "SELECT Nombre FROM Cliente WHERE Rut = '" + rutcliente.Text + "'";
-            string buscarcliente = conex.selectQueryScalar(cliente);
-            string vendedor = "SELECT Nombre FROM Empleado WHERE Rut = '" + rutvendedor.Text + "'";
-            string buscarvendedor = conex.selectQueryScalar(vendedor);
-            string datosventa = "INSERT INTO Venta(Comprador, Vendedor, Fecha, EmpleadoRut, ClienteRut) VALUES ('" + buscarcliente + "', '" + buscarvendedor + "', '" +fecha.Text  + "', '" + rutvendedor.Text + "', '" + rutcliente.Text + "')";
 
-            int x = conex.executeNonQuery(datosventa);
-            if (x == 1)
+            if (string.IsNullOrWhiteSpace(rutcliente.Text) || string.IsNullOrWhiteSpace(rutvendedor.Text))
             {
-                MessageBox.Show("se ingreso exitosamente");
+                MessageBox.Show("Complete los campos");
             }
             else
             {
-                MessageBox.Show("no se agrego");
+                string cliente = "SELECT Nombre FROM Cliente WHERE Rut = '" + rutcliente.Text + "'";
+                string buscarcliente = conex.selectQueryScalar(cliente);
+
+                string vendedor = "SELECT Nombre FROM Empleado WHERE Rut = '" + rutvendedor.Text + "'";
+                string buscarvendedor = conex.selectQueryScalar(vendedor);
+
+                string datosventa = "INSERT INTO Venta(Comprador, Vendedor, EmpleadoRut, ClienteRut, Fecha, Hora) VALUES ('" + buscarcliente + "', '" + buscarvendedor + "','" + rutvendedor.Text + "', '" + rutcliente.Text + "','" + fecha.Text + "', '" + hora.Text + "')";
+                
+
+                DetalleVenta f = new DetalleVenta();
+                this.Hide();
+                f.Show();
+                
+
+                
+                
             }
+            
+
+            
             conex.close();
-
-
-
-            DetalleVenta f = new DetalleVenta();
-            this.Hide();
-            f.Show();
+            
+            
         }
     }
 }

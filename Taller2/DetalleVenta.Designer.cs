@@ -30,17 +30,17 @@ namespace Taller2
         private void InitializeComponent()
         {
             this.BotonComprar = new System.Windows.Forms.Button();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.totalpagar = new System.Windows.Forms.TextBox();
+            this.descuentocliente = new System.Windows.Forms.TextBox();
+            this.total = new System.Windows.Forms.TextBox();
+            this.totaliva = new System.Windows.Forms.TextBox();
+            this.totalneto = new System.Windows.Forms.TextBox();
+            this.descuento = new System.Windows.Forms.TextBox();
+            this.valor = new System.Windows.Forms.TextBox();
+            this.neto = new System.Windows.Forms.TextBox();
+            this.cantidad = new System.Windows.Forms.TextBox();
+            this.autor = new System.Windows.Forms.TextBox();
+            this.nombrelibro = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -54,6 +54,7 @@ namespace Taller2
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.calculartotal = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BotonComprar
@@ -67,94 +68,95 @@ namespace Taller2
             this.BotonComprar.TabIndex = 82;
             this.BotonComprar.Text = "Comprar";
             this.BotonComprar.UseVisualStyleBackColor = false;
+            this.BotonComprar.Click += new System.EventHandler(this.BotonComprar_Click);
             // 
-            // textBox11
+            // totalpagar
             // 
-            this.textBox11.Location = new System.Drawing.Point(215, 394);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(132, 22);
-            this.textBox11.TabIndex = 81;
+            this.totalpagar.Location = new System.Drawing.Point(215, 394);
+            this.totalpagar.Margin = new System.Windows.Forms.Padding(4);
+            this.totalpagar.Name = "totalpagar";
+            this.totalpagar.Size = new System.Drawing.Size(132, 22);
+            this.totalpagar.TabIndex = 81;
             // 
-            // textBox10
+            // descuentocliente
             // 
-            this.textBox10.Location = new System.Drawing.Point(338, 344);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(59, 22);
-            this.textBox10.TabIndex = 80;
+            this.descuentocliente.Location = new System.Drawing.Point(338, 344);
+            this.descuentocliente.Margin = new System.Windows.Forms.Padding(4);
+            this.descuentocliente.Name = "descuentocliente";
+            this.descuentocliente.Size = new System.Drawing.Size(59, 22);
+            this.descuentocliente.TabIndex = 80;
             // 
-            // textBox9
+            // total
             // 
-            this.textBox9.Location = new System.Drawing.Point(251, 316);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(132, 22);
-            this.textBox9.TabIndex = 79;
+            this.total.Location = new System.Drawing.Point(251, 316);
+            this.total.Margin = new System.Windows.Forms.Padding(4);
+            this.total.Name = "total";
+            this.total.Size = new System.Drawing.Size(132, 22);
+            this.total.TabIndex = 79;
             // 
-            // textBox8
+            // totaliva
             // 
-            this.textBox8.Location = new System.Drawing.Point(251, 288);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(132, 22);
-            this.textBox8.TabIndex = 78;
+            this.totaliva.Location = new System.Drawing.Point(251, 288);
+            this.totaliva.Margin = new System.Windows.Forms.Padding(4);
+            this.totaliva.Name = "totaliva";
+            this.totaliva.Size = new System.Drawing.Size(132, 22);
+            this.totaliva.TabIndex = 78;
             // 
-            // textBox7
+            // totalneto
             // 
-            this.textBox7.Location = new System.Drawing.Point(251, 261);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(132, 22);
-            this.textBox7.TabIndex = 77;
+            this.totalneto.Location = new System.Drawing.Point(251, 261);
+            this.totalneto.Margin = new System.Windows.Forms.Padding(4);
+            this.totalneto.Name = "totalneto";
+            this.totalneto.Size = new System.Drawing.Size(132, 22);
+            this.totalneto.TabIndex = 77;
             // 
-            // textBox6
+            // descuento
             // 
-            this.textBox6.Location = new System.Drawing.Point(460, 215);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(76, 22);
-            this.textBox6.TabIndex = 76;
+            this.descuento.Location = new System.Drawing.Point(460, 215);
+            this.descuento.Margin = new System.Windows.Forms.Padding(4);
+            this.descuento.Name = "descuento";
+            this.descuento.Size = new System.Drawing.Size(76, 22);
+            this.descuento.TabIndex = 76;
             // 
-            // textBox5
+            // valor
             // 
-            this.textBox5.Location = new System.Drawing.Point(574, 215);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(109, 22);
-            this.textBox5.TabIndex = 75;
+            this.valor.Location = new System.Drawing.Point(574, 215);
+            this.valor.Margin = new System.Windows.Forms.Padding(4);
+            this.valor.Name = "valor";
+            this.valor.Size = new System.Drawing.Size(109, 22);
+            this.valor.TabIndex = 75;
             // 
-            // textBox4
+            // neto
             // 
-            this.textBox4.Location = new System.Drawing.Point(335, 215);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(88, 22);
-            this.textBox4.TabIndex = 74;
+            this.neto.Location = new System.Drawing.Point(335, 215);
+            this.neto.Margin = new System.Windows.Forms.Padding(4);
+            this.neto.Name = "neto";
+            this.neto.Size = new System.Drawing.Size(88, 22);
+            this.neto.TabIndex = 74;
             // 
-            // textBox3
+            // cantidad
             // 
-            this.textBox3.Location = new System.Drawing.Point(251, 215);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(48, 22);
-            this.textBox3.TabIndex = 73;
+            this.cantidad.Location = new System.Drawing.Point(375, 146);
+            this.cantidad.Margin = new System.Windows.Forms.Padding(4);
+            this.cantidad.Name = "cantidad";
+            this.cantidad.Size = new System.Drawing.Size(61, 22);
+            this.cantidad.TabIndex = 73;
             // 
-            // textBox2
+            // autor
             // 
-            this.textBox2.Location = new System.Drawing.Point(64, 215);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(169, 22);
-            this.textBox2.TabIndex = 72;
+            this.autor.Location = new System.Drawing.Point(64, 215);
+            this.autor.Margin = new System.Windows.Forms.Padding(4);
+            this.autor.Name = "autor";
+            this.autor.Size = new System.Drawing.Size(208, 22);
+            this.autor.TabIndex = 72;
             // 
-            // textBox1
+            // nombrelibro
             // 
-            this.textBox1.Location = new System.Drawing.Point(64, 146);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(247, 22);
-            this.textBox1.TabIndex = 71;
+            this.nombrelibro.Location = new System.Drawing.Point(64, 146);
+            this.nombrelibro.Margin = new System.Windows.Forms.Padding(4);
+            this.nombrelibro.Name = "nombrelibro";
+            this.nombrelibro.Size = new System.Drawing.Size(247, 22);
+            this.nombrelibro.TabIndex = 71;
             // 
             // label13
             // 
@@ -239,7 +241,7 @@ namespace Taller2
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(247, 195);
+            this.label4.Location = new System.Drawing.Point(372, 126);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 17);
@@ -289,23 +291,37 @@ namespace Taller2
             this.label2.Text = "Realizar una Venta al Cliente";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // calculartotal
+            // 
+            this.calculartotal.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.calculartotal.Font = new System.Drawing.Font("Javanese Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calculartotal.Location = new System.Drawing.Point(507, 134);
+            this.calculartotal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.calculartotal.Name = "calculartotal";
+            this.calculartotal.Size = new System.Drawing.Size(98, 34);
+            this.calculartotal.TabIndex = 83;
+            this.calculartotal.Text = "Calcular";
+            this.calculartotal.UseVisualStyleBackColor = false;
+            this.calculartotal.Click += new System.EventHandler(this.calculartotal_Click);
+            // 
             // DetalleVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(789, 450);
+            this.Controls.Add(this.calculartotal);
             this.Controls.Add(this.BotonComprar);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.totalpagar);
+            this.Controls.Add(this.descuentocliente);
+            this.Controls.Add(this.total);
+            this.Controls.Add(this.totaliva);
+            this.Controls.Add(this.totalneto);
+            this.Controls.Add(this.descuento);
+            this.Controls.Add(this.valor);
+            this.Controls.Add(this.neto);
+            this.Controls.Add(this.cantidad);
+            this.Controls.Add(this.autor);
+            this.Controls.Add(this.nombrelibro);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -321,6 +337,7 @@ namespace Taller2
             this.Controls.Add(this.label2);
             this.Name = "DetalleVenta";
             this.Text = "DetalleVenta";
+            this.Load += new System.EventHandler(this.DetalleVenta_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -329,17 +346,17 @@ namespace Taller2
         #endregion
 
         private System.Windows.Forms.Button BotonComprar;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox totalpagar;
+        private System.Windows.Forms.TextBox descuentocliente;
+        private System.Windows.Forms.TextBox total;
+        private System.Windows.Forms.TextBox totaliva;
+        private System.Windows.Forms.TextBox totalneto;
+        private System.Windows.Forms.TextBox descuento;
+        private System.Windows.Forms.TextBox valor;
+        private System.Windows.Forms.TextBox neto;
+        private System.Windows.Forms.TextBox cantidad;
+        private System.Windows.Forms.TextBox autor;
+        private System.Windows.Forms.TextBox nombrelibro;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
@@ -353,5 +370,6 @@ namespace Taller2
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button calculartotal;
     }
 }
