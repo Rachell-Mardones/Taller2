@@ -33,48 +33,49 @@ namespace Taller2
             fecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
             hora.Text = DateTime.Now.ToString("HH:mm");
 
-
             ConexMySQL conex = new ConexMySQL();
             conex.open();
-            string s = "SELECT STR_TO_DATE('" + fecha.Text + "', '%e %M %Y')";
-            string q = conex.selectQueryScalar(s);
-            MessageBox.Show(q);
+
+            string c = "SELECT * FROM Cliente";
+            DataTable c1 = conex.selectQuery(c);
+            for (int i = 0; i < c1.Rows.Count; i++)
+            {
+                listacliente.Items.Add(c1.Rows[i]["Rut"]);
+            }
+
+            string v = "SELECT * FROM Empleado";
+            DataTable v1 = conex.selectQuery(v);
+            for (int i = 0; i < v1.Rows.Count; i++)
+            {
+                listavendedor.Items.Add(v1.Rows[i]["Rut"]);
+            }
+
 
         }
 
         private void ingresardatosventa_Click(object sender, EventArgs e)
         {
-            
-
             ConexMySQL conex = new ConexMySQL();
             conex.open();
 
-
-            
-
-
-            if (string.IsNullOrWhiteSpace(rutcliente.Text) || string.IsNullOrWhiteSpace(rutvendedor.Text))
+            if (string.IsNullOrWhiteSpace(listacliente.Text) || string.IsNullOrWhiteSpace(listavendedor.Text))
             {
                 MessageBox.Show("Complete los campos");
             }
             else
             {
-                string cliente = "SELECT Nombre FROM Cliente WHERE Rut = '" + rutcliente.Text + "'";
+                string cliente = "SELECT Nombre FROM Cliente WHERE Rut = '" + listacliente.Text + "'";
                 string buscarcliente = conex.selectQueryScalar(cliente);
 
-                string vendedor = "SELECT Nombre FROM Empleado WHERE Rut = '" + rutvendedor.Text + "'";
+                string vendedor = "SELECT Nombre FROM Empleado WHERE Rut = '" + listavendedor.Text + "'";
                 string buscarvendedor = conex.selectQueryScalar(vendedor);
 
-                string datosventa = "INSERT INTO Venta(Comprador, Vendedor, EmpleadoRut, ClienteRut, Fecha, Hora) VALUES ('" + buscarcliente + "', '" + buscarvendedor + "','" + rutvendedor.Text + "', '" + rutcliente.Text + "','" + fecha.Text + "', '" + hora.Text + "')";
+                string datosventa = "INSERT INTO Venta(Comprador, Vendedor, EmpleadoRut, ClienteRut, Fecha, Hora) VALUES ('" + buscarcliente + "', '" + buscarvendedor + "','" + listavendedor.Text + "', '" + listacliente.Text + "','" + fecha.Text + "', '" + hora.Text + "')";
                 
 
                 DetalleVenta f = new DetalleVenta();
                 this.Hide();
                 f.Show();
-                
-
-                
-                
             }
             
 

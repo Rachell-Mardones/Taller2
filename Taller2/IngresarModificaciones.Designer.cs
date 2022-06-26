@@ -30,7 +30,7 @@ namespace Taller2
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.contraseña = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -40,30 +40,28 @@ namespace Taller2
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cooper Black", 25.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(131, 45);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(175, 55);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(352, 39);
+            this.label1.Size = new System.Drawing.Size(447, 49);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ingreso a Consultas";
             // 
-            // textBox1
+            // contraseña
             // 
-            this.textBox1.Location = new System.Drawing.Point(202, 154);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(162, 20);
-            this.textBox1.TabIndex = 1;
+            this.contraseña.Location = new System.Drawing.Point(269, 190);
+            this.contraseña.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.contraseña.Name = "contraseña";
+            this.contraseña.PasswordChar = '*';
+            this.contraseña.Size = new System.Drawing.Size(215, 22);
+            this.contraseña.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Javanese Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(212, 115);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(283, 142);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(153, 36);
+            this.label2.Size = new System.Drawing.Size(191, 45);
             this.label2.TabIndex = 2;
             this.label2.Text = "Ingresar contraseña";
             // 
@@ -71,10 +69,10 @@ namespace Taller2
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Highlight;
             this.button1.Font = new System.Drawing.Font("Javanese Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(241, 193);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(321, 238);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(77, 33);
+            this.button1.Size = new System.Drawing.Size(103, 41);
             this.button1.TabIndex = 4;
             this.button1.Text = "Ingresar";
             this.button1.UseVisualStyleBackColor = false;
@@ -84,10 +82,10 @@ namespace Taller2
             // 
             this.button7.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.button7.Font = new System.Drawing.Font("Javanese Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(9, 328);
-            this.button7.Margin = new System.Windows.Forms.Padding(2);
+            this.button7.Location = new System.Drawing.Point(12, 404);
+            this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(62, 28);
+            this.button7.Size = new System.Drawing.Size(83, 34);
             this.button7.TabIndex = 21;
             this.button7.Text = "Atrás";
             this.button7.UseVisualStyleBackColor = false;
@@ -95,16 +93,16 @@ namespace Taller2
             // 
             // IngresarModificaciones
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.contraseña);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "IngresarModificaciones";
             this.Text = "IngresarModificaciones";
             this.Load += new System.EventHandler(this.IngresarModificaciones_Load);
@@ -116,7 +114,7 @@ namespace Taller2
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox contraseña;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button7;

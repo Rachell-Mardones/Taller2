@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1;
 
 namespace Taller2
 {
@@ -21,9 +22,12 @@ namespace Taller2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string clave = textBox1.Text;
+            ConexMySQL conex = new ConexMySQL();
+            conex.open();
+            string c = "SELECT Clave FROM Contraseña";
+            string clave = conex.selectQueryScalar(c);
 
-            if (clave != "123456")
+            if (contraseña.Text != clave)
             {
 
                 MessageBox.Show("Clave de administrador incorrecto.");

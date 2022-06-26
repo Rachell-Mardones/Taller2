@@ -40,7 +40,6 @@ namespace Taller2
             this.neto = new System.Windows.Forms.TextBox();
             this.cantidad = new System.Windows.Forms.TextBox();
             this.autor = new System.Windows.Forms.TextBox();
-            this.nombrelibro = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -55,6 +54,7 @@ namespace Taller2
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.calculartotal = new System.Windows.Forms.Button();
+            this.listalibro = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // BotonComprar
@@ -149,14 +149,6 @@ namespace Taller2
             this.autor.Name = "autor";
             this.autor.Size = new System.Drawing.Size(208, 22);
             this.autor.TabIndex = 72;
-            // 
-            // nombrelibro
-            // 
-            this.nombrelibro.Location = new System.Drawing.Point(64, 146);
-            this.nombrelibro.Margin = new System.Windows.Forms.Padding(4);
-            this.nombrelibro.Name = "nombrelibro";
-            this.nombrelibro.Size = new System.Drawing.Size(247, 22);
-            this.nombrelibro.TabIndex = 71;
             // 
             // label13
             // 
@@ -304,11 +296,20 @@ namespace Taller2
             this.calculartotal.UseVisualStyleBackColor = false;
             this.calculartotal.Click += new System.EventHandler(this.calculartotal_Click);
             // 
+            // listalibro
+            // 
+            this.listalibro.FormattingEnabled = true;
+            this.listalibro.Location = new System.Drawing.Point(63, 146);
+            this.listalibro.Name = "listalibro";
+            this.listalibro.Size = new System.Drawing.Size(284, 24);
+            this.listalibro.TabIndex = 84;
+            // 
             // DetalleVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(789, 450);
+            this.Controls.Add(this.listalibro);
             this.Controls.Add(this.calculartotal);
             this.Controls.Add(this.BotonComprar);
             this.Controls.Add(this.totalpagar);
@@ -321,7 +322,6 @@ namespace Taller2
             this.Controls.Add(this.neto);
             this.Controls.Add(this.cantidad);
             this.Controls.Add(this.autor);
-            this.Controls.Add(this.nombrelibro);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -356,7 +356,6 @@ namespace Taller2
         private System.Windows.Forms.TextBox neto;
         private System.Windows.Forms.TextBox cantidad;
         private System.Windows.Forms.TextBox autor;
-        private System.Windows.Forms.TextBox nombrelibro;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
@@ -371,5 +370,6 @@ namespace Taller2
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button calculartotal;
+        private System.Windows.Forms.ComboBox listalibro;
     }
 }

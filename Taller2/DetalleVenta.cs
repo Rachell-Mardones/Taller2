@@ -29,6 +29,18 @@ namespace Taller2
             total.ReadOnly = true;
             descuentocliente.ReadOnly = true;
             totalpagar.ReadOnly = true;
+            
+
+            ConexMySQL conex = new ConexMySQL();
+            conex.open();
+
+            string L = "SELECT * FROM Libro";
+            DataTable L1 = conex.selectQuery(L);
+            for (int i = 0; i < L1.Rows.Count; i++)
+            {
+                listalibro.Items.Add(L1.Rows[i]["Nombre"]);
+            }
+
         }
 
         private void calculartotal_Click(object sender, EventArgs e)
@@ -36,16 +48,16 @@ namespace Taller2
             ConexMySQL conex = new ConexMySQL();
             conex.open();
 
-            string dato = "SELECT Autor FROM Libro WHERE Nombre = '" + nombrelibro.Text + "'";
+            string dato = "SELECT Autor FROM Libro WHERE Nombre = '" + listalibro.Text + "'";
             string a = conex.selectQueryScalar(dato);
             autor.Text = a;
 
-            string dato2 = "SELECT PrecioNeto FROM Libro WHERE Nombre = '" + nombrelibro.Text + "'";
+            string dato2 = "SELECT PrecioNeto FROM Libro WHERE Nombre = '" + listalibro.Text + "'";
             string a2 = conex.selectQueryScalar(dato2);
             neto.Text = a2;
             int num_neto = Int32.Parse(a2);
 
-            string dato3 = "SELECT PorcentajeDescuento FROM Libro WHERE Nombre = '" + nombrelibro.Text + "'";
+            string dato3 = "SELECT PorcentajeDescuento FROM Libro WHERE Nombre = '" + listalibro.Text + "'";
             string a3 = conex.selectQueryScalar(dato3);
             descuento.Text = a3;
             int num_descuento = Int32.Parse(a3);
@@ -94,7 +106,7 @@ namespace Taller2
             ConexMySQL conex = new ConexMySQL();
             conex.open();
 
-            string dato = "SELECT ISBN FROM Libro WHERE Nombre = '" + nombrelibro.Text + "'";
+            string dato = "SELECT ISBN FROM Libro WHERE Nombre = '" + listalibro.Text + "'";
             string a = conex.selectQueryScalar(dato);
            
 
@@ -103,7 +115,7 @@ namespace Taller2
             string idv = conex.selectQueryScalar(idventa);
 
             //insertar los datos a la tabla detalle_de_venta
-            string Detalle = "INSERT INTO DetalleDeVenta(Autor, Nombre, Cantidad, Neto, Descuento, Valor, TotalAPagar, DescuentoCliente, VentaID) VALUES('" + autor.Text + "','" + nombrelibro.Text + "','" + cantidad.Text + "','" + neto.Text + "','" + descuento.Text + "','" + valor.Text + "','" + totalpagar.Text + "','" + descuentocliente.Text + "','" + idv + "')";
+            string Detalle = "INSERT INTO DetalleDeVenta(Autor, Nombre, Cantidad, Neto, Descuento, Valor, TotalAPagar, DescuentoCliente, VentaID) VALUES('" + autor.Text + "','" + listalibro.Text + "','" + cantidad.Text + "','" + neto.Text + "','" + descuento.Text + "','" + valor.Text + "','" + totalpagar.Text + "','" + descuentocliente.Text + "','" + idv + "')";
             int q = conex.executeNonQuery(Detalle);
             if (q == 1)
             {

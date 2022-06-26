@@ -32,15 +32,15 @@ namespace Taller2
             this.label2 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.rutcliente = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.rutvendedor = new System.Windows.Forms.TextBox();
             this.fecha = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.ingresardatosventa = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.hora = new System.Windows.Forms.TextBox();
+            this.listacliente = new System.Windows.Forms.ComboBox();
+            this.listavendedor = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label2
@@ -78,14 +78,6 @@ namespace Taller2
             this.label1.TabIndex = 24;
             this.label1.Text = "Rut del Cliente";
             // 
-            // rutcliente
-            // 
-            this.rutcliente.Location = new System.Drawing.Point(223, 147);
-            this.rutcliente.Margin = new System.Windows.Forms.Padding(4);
-            this.rutcliente.Name = "rutcliente";
-            this.rutcliente.Size = new System.Drawing.Size(132, 22);
-            this.rutcliente.TabIndex = 25;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -95,14 +87,6 @@ namespace Taller2
             this.label4.Size = new System.Drawing.Size(96, 17);
             this.label4.TabIndex = 28;
             this.label4.Text = "Rut Vendedor";
-            // 
-            // rutvendedor
-            // 
-            this.rutvendedor.Location = new System.Drawing.Point(223, 214);
-            this.rutvendedor.Margin = new System.Windows.Forms.Padding(4);
-            this.rutvendedor.Name = "rutvendedor";
-            this.rutvendedor.Size = new System.Drawing.Size(132, 22);
-            this.rutvendedor.TabIndex = 29;
             // 
             // fecha
             // 
@@ -164,20 +148,36 @@ namespace Taller2
             this.hora.Size = new System.Drawing.Size(132, 22);
             this.hora.TabIndex = 35;
             // 
+            // listacliente
+            // 
+            this.listacliente.FormattingEnabled = true;
+            this.listacliente.Location = new System.Drawing.Point(223, 143);
+            this.listacliente.Name = "listacliente";
+            this.listacliente.Size = new System.Drawing.Size(132, 24);
+            this.listacliente.TabIndex = 36;
+            // 
+            // listavendedor
+            // 
+            this.listavendedor.FormattingEnabled = true;
+            this.listavendedor.Location = new System.Drawing.Point(223, 217);
+            this.listavendedor.Name = "listavendedor";
+            this.listavendedor.Size = new System.Drawing.Size(138, 24);
+            this.listavendedor.TabIndex = 37;
+            // 
             // RealizarVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(995, 450);
+            this.Controls.Add(this.listavendedor);
+            this.Controls.Add(this.listacliente);
             this.Controls.Add(this.hora);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.ingresardatosventa);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.fecha);
-            this.Controls.Add(this.rutvendedor);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.rutcliente);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.label2);
@@ -195,14 +195,14 @@ namespace Taller2
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox rutcliente;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox rutvendedor;
         private System.Windows.Forms.TextBox fecha;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button ingresardatosventa;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox hora;
+        private System.Windows.Forms.ComboBox listacliente;
+        private System.Windows.Forms.ComboBox listavendedor;
     }
 }
