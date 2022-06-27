@@ -50,9 +50,10 @@ namespace Taller2
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cooper Black", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(213, 40);
+            this.label1.Location = new System.Drawing.Point(160, 32);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(356, 49);
+            this.label1.Size = new System.Drawing.Size(288, 40);
             this.label1.TabIndex = 5;
             this.label1.Text = "Modificaciones ";
             // 
@@ -60,9 +61,10 @@ namespace Taller2
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Javanese Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(131, 168);
+            this.label5.Location = new System.Drawing.Point(101, 150);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 45);
+            this.label5.Size = new System.Drawing.Size(53, 36);
             this.label5.TabIndex = 7;
             this.label5.Text = "Libro";
             // 
@@ -70,9 +72,10 @@ namespace Taller2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Javanese Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(351, 255);
+            this.label2.Location = new System.Drawing.Point(263, 214);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 45);
+            this.label2.Size = new System.Drawing.Size(67, 36);
             this.label2.TabIndex = 8;
             this.label2.Text = "Cliente";
             // 
@@ -80,9 +83,10 @@ namespace Taller2
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Javanese Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(561, 168);
+            this.label3.Location = new System.Drawing.Point(421, 150);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 45);
+            this.label3.Size = new System.Drawing.Size(86, 36);
             this.label3.TabIndex = 9;
             this.label3.Text = "Empleado";
             // 
@@ -90,9 +94,10 @@ namespace Taller2
             // 
             this.button4.BackColor = System.Drawing.SystemColors.Highlight;
             this.button4.Font = new System.Drawing.Font("Javanese Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(122, 216);
+            this.button4.Location = new System.Drawing.Point(92, 176);
+            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(86, 44);
+            this.button4.Size = new System.Drawing.Size(71, 36);
             this.button4.TabIndex = 13;
             this.button4.Text = "Entrar";
             this.button4.UseVisualStyleBackColor = false;
@@ -102,9 +107,10 @@ namespace Taller2
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Highlight;
             this.button1.Font = new System.Drawing.Font("Javanese Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(348, 303);
+            this.button1.Location = new System.Drawing.Point(251, 239);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 44);
+            this.button1.Size = new System.Drawing.Size(88, 33);
             this.button1.TabIndex = 14;
             this.button1.Text = "Entrar";
             this.button1.UseVisualStyleBackColor = false;
@@ -114,9 +120,10 @@ namespace Taller2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.Highlight;
             this.button2.Font = new System.Drawing.Font("Javanese Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(569, 216);
+            this.button2.Location = new System.Drawing.Point(427, 176);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 44);
+            this.button2.Size = new System.Drawing.Size(69, 36);
             this.button2.TabIndex = 15;
             this.button2.Text = "Entrar";
             this.button2.UseVisualStyleBackColor = false;
@@ -125,7 +132,8 @@ namespace Taller2
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Taller2.Properties.Resources.Empleados;
-            this.pictureBox3.Location = new System.Drawing.Point(538, 266);
+            this.pictureBox3.Location = new System.Drawing.Point(402, 214);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(154, 73);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -135,18 +143,20 @@ namespace Taller2
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Taller2.Properties.Resources.Clientes;
-            this.pictureBox2.Location = new System.Drawing.Point(305, 158);
+            this.pictureBox2.Location = new System.Drawing.Point(235, 129);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(172, 102);
+            this.pictureBox2.Size = new System.Drawing.Size(129, 83);
             this.pictureBox2.TabIndex = 17;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Taller2.Properties.Resources.Libro;
-            this.pictureBox1.Location = new System.Drawing.Point(97, 266);
+            this.pictureBox1.Location = new System.Drawing.Point(73, 216);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(144, 104);
+            this.pictureBox1.Size = new System.Drawing.Size(108, 84);
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
@@ -154,9 +164,10 @@ namespace Taller2
             // 
             this.button7.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.button7.Font = new System.Drawing.Font("Javanese Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(12, 404);
+            this.button7.Location = new System.Drawing.Point(9, 328);
+            this.button7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(83, 34);
+            this.button7.Size = new System.Drawing.Size(62, 28);
             this.button7.TabIndex = 20;
             this.button7.Text = "Atrás";
             this.button7.UseVisualStyleBackColor = false;
@@ -164,10 +175,10 @@ namespace Taller2
             // 
             // Modificaciones
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -179,6 +190,7 @@ namespace Taller2
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Modificaciones";
             this.Text = "Modificaciones";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

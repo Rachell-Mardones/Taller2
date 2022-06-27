@@ -72,7 +72,7 @@ namespace Taller2
             // 
             // Agregar_Cliente
             // 
-            this.Agregar_Cliente.Location = new System.Drawing.Point(179, 287);
+            this.Agregar_Cliente.Location = new System.Drawing.Point(179, 277);
             this.Agregar_Cliente.Name = "Agregar_Cliente";
             this.Agregar_Cliente.Size = new System.Drawing.Size(100, 25);
             this.Agregar_Cliente.TabIndex = 18;

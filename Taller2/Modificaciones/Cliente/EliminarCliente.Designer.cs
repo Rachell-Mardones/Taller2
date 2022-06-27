@@ -84,7 +84,7 @@ namespace Taller2
             // 
             // btnEliminarCliente
             // 
-            this.btnEliminarCliente.Location = new System.Drawing.Point(226, 199);
+            this.btnEliminarCliente.Location = new System.Drawing.Point(225, 180);
             this.btnEliminarCliente.Name = "btnEliminarCliente";
             this.btnEliminarCliente.Size = new System.Drawing.Size(113, 25);
             this.btnEliminarCliente.TabIndex = 20;

@@ -56,7 +56,7 @@ namespace Taller2
             this.button7.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.button7.Font = new System.Drawing.Font("Javanese Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.Location = new System.Drawing.Point(11, 270);
-            this.button7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(62, 28);
             this.button7.TabIndex = 17;
@@ -84,7 +84,7 @@ namespace Taller2
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(239, 240);
+            this.button1.Location = new System.Drawing.Point(239, 198);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(92, 32);
             this.button1.TabIndex = 20;
@@ -95,7 +95,7 @@ namespace Taller2
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(269, 175);
+            this.label3.Location = new System.Drawing.Point(269, 156);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 21;
@@ -103,7 +103,7 @@ namespace Taller2
             // 
             // textDinero
             // 
-            this.textDinero.Location = new System.Drawing.Point(219, 191);
+            this.textDinero.Location = new System.Drawing.Point(219, 172);
             this.textDinero.Name = "textDinero";
             this.textDinero.Size = new System.Drawing.Size(148, 20);
             this.textDinero.TabIndex = 29;
@@ -120,7 +120,7 @@ namespace Taller2
             this.Controls.Add(this.cboRutCliente);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AgregarDineroCliente";
             this.Text = "AgregarDineroCliente";
             this.Load += new System.EventHandler(this.AgregarDineroCliente_Load);

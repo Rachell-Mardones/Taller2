@@ -41,9 +41,10 @@ namespace Taller2
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Cooper Black", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(120, 32);
+            this.label2.Location = new System.Drawing.Point(90, 26);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(569, 49);
+            this.label2.Size = new System.Drawing.Size(463, 40);
             this.label2.TabIndex = 7;
             this.label2.Text = "Agregar nueva categoria ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -52,9 +53,10 @@ namespace Taller2
             // 
             this.button7.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.button7.Font = new System.Drawing.Font("Javanese Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(12, 404);
+            this.button7.Location = new System.Drawing.Point(9, 328);
+            this.button7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(83, 34);
+            this.button7.Size = new System.Drawing.Size(62, 28);
             this.button7.TabIndex = 20;
             this.button7.Text = "Atrás";
             this.button7.UseVisualStyleBackColor = false;
@@ -64,24 +66,27 @@ namespace Taller2
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Javanese Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(155, 156);
+            this.label1.Location = new System.Drawing.Point(116, 127);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 45);
+            this.label1.Size = new System.Drawing.Size(71, 36);
             this.label1.TabIndex = 21;
             this.label1.Text = "Nombre";
             // 
             // NombreCategoria
             // 
-            this.NombreCategoria.Location = new System.Drawing.Point(275, 165);
+            this.NombreCategoria.Location = new System.Drawing.Point(206, 134);
+            this.NombreCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.NombreCategoria.Name = "NombreCategoria";
-            this.NombreCategoria.Size = new System.Drawing.Size(241, 22);
+            this.NombreCategoria.Size = new System.Drawing.Size(182, 20);
             this.NombreCategoria.TabIndex = 22;
             // 
             // BotonAgregarCategoria
             // 
-            this.BotonAgregarCategoria.Location = new System.Drawing.Point(347, 257);
+            this.BotonAgregarCategoria.Location = new System.Drawing.Point(260, 158);
+            this.BotonAgregarCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BotonAgregarCategoria.Name = "BotonAgregarCategoria";
-            this.BotonAgregarCategoria.Size = new System.Drawing.Size(86, 32);
+            this.BotonAgregarCategoria.Size = new System.Drawing.Size(64, 26);
             this.BotonAgregarCategoria.TabIndex = 27;
             this.BotonAgregarCategoria.Text = "Agregar";
             this.BotonAgregarCategoria.UseVisualStyleBackColor = true;
@@ -89,14 +94,15 @@ namespace Taller2
             // 
             // AgregarCategoria
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.BotonAgregarCategoria);
             this.Controls.Add(this.NombreCategoria);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.label2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AgregarCategoria";
             this.Text = "AgregarCategoria";
             this.ResumeLayout(false);
