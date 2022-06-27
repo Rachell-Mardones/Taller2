@@ -38,7 +38,7 @@ namespace Taller2
                 conex.open();
                 try
                 {
-                    string queryAutor = "SELECT nombreCategoria FROM Categoria WHERE nombreCategoria = '" + cboCategoriaLibro.Text + "'";
+                    string queryAutor = "SELECT nombre FROM Categoria WHERE nombre = '" + cboCategoriaLibro.Text + "'";
                     query = conex.selectQueryScalar(queryAutor);
                 }
                 catch (Exception error)
@@ -46,8 +46,8 @@ namespace Taller2
                     string error1 = error.ToString();
 
                 }
-                string queryFinal = "select l.isbn, l.nombre, l.autor, l.PorcentajeDescuento from libro as l inner join libro_categoria as lc on l.ISBN = lc.LibroISBN inner join categoria as c on lc.CategoriaID = c.ID where c.nombreCategoria = '" + query + "' and PorcentajeDescuento > 0";
-                //string queryFinal = "SELECT nombre FROM Libro WHERE autor = '" + query + "'";
+                string queryFinal = "select l.isbn, l.nombre, l.autor, l.PorcentajeDescuento from libro as l inner join libro_categoria as lc on l.ISBN = lc.LibroISBN inner join categoria as c on lc.CategoriaID = c.ID where c.nombre = '" + query + "' and PorcentajeDescuento > 0";
+                
                 DataTable tabla = conex.selectQuery(queryFinal);
                 dato.DataSource = tabla;
             }
@@ -58,11 +58,11 @@ namespace Taller2
         {
             ConexMySQL conex = new ConexMySQL();
             conex.open();
-            string queryCboLibroPromocion = "SELECT nombreCategoria FROM Categoria";
+            string queryCboLibroPromocion = "SELECT nombre FROM Categoria";
             DataTable tablaLibro = conex.selectQuery(queryCboLibroPromocion);
             for (int i = 0; i < tablaLibro.Rows.Count; i++)
             {
-                cboCategoriaLibro.Items.Add(tablaLibro.Rows[i]["nombreCategoria"]);
+                cboCategoriaLibro.Items.Add(tablaLibro.Rows[i]["nombre"]);
             }
         }
 

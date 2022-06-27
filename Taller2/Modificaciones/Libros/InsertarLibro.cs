@@ -110,6 +110,7 @@ namespace Taller2
             
             
             string insertarcategoria = "INSERT INTO Libro_Categoria(LibroISBN, CategoriaID) VALUES ('" + isbn.Text + "', '" + categoriaencontrada + "')";
+            int q = conex.executeNonQuery(insertarcategoria);
 
 
 

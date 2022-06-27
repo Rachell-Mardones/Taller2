@@ -44,7 +44,7 @@ namespace Taller2
 
                 }
                                 
-                string queryFinal = "select l.isbn, l.nombre, l.editorial, l.CantidadStock, dv.TotalAPagar from libro as l inner join libro_detalledeventa as ld on l.ISBN = ld.LibroISBN inner join detalledeventa as dv on ld.DetalleDeVentaID = dv.id where l.Nombre = '" + queryLibro + "'";
+                string queryFinal = "select l.isbn, l.nombre, l.editorial, l.Stock, dv.TotalAPagar from libro as l inner join libro_detalledeventa as ld on l.ISBN = ld.LibroISBN inner join detalledeventa as dv on ld.DetalleDeVentaID = dv.id where l.Nombre = '" + queryLibro + "'";
                 DataTable tabla = conex.selectQuery(queryFinal);
                 dataGridView1.DataSource = tabla;
             }

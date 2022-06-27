@@ -48,7 +48,7 @@ namespace Taller2
             ConexMySQL conex = new ConexMySQL();
             conex.open();
 
-            string dato8 = "SELECT CantidadStock FROM Libro WHERE Nombre = '" + listalibro.Text + "'";
+            string dato8 = "SELECT Stock FROM Libro WHERE Nombre = '" + listalibro.Text + "'";
             string a8 = conex.selectQueryScalar(dato8);
             Double stock1 = Double.Parse(a8);
             Double num_cant = Double.Parse(cantidad.Text);
@@ -135,9 +135,23 @@ namespace Taller2
             }
             else
             {
+                double saldofinal = sald - tpagar;
+                String SF = saldofinal.ToString();
+
+                string actualizacion = "UPDATE Cliente SET Saldo = '" + SF + "' WHERE Nombre = '" + a4 + "'";
+                int x = conex.executeNonQuery(actualizacion);
+
+                //restar stock de libros
+                string dato8 = "SELECT Stock FROM Libro WHERE Nombre = '" + listalibro.Text + "'";
+                string a8 = conex.selectQueryScalar(dato8);
+                Double stock1 = Double.Parse(a8);
+                Double num_cant = Double.Parse(cantidad.Text);
+                double StockF = stock1 - num_cant;
+                string actualizacionstock = "UPDATE Libro SET Stock = '" + StockF + "' WHERE NOmbre = '" + listalibro.Text + "'";
+                int t = conex.executeNonQuery(actualizacionstock);
+
                 string dato = "SELECT ISBN FROM Libro WHERE Nombre = '" + listalibro.Text + "'";
                 string a = conex.selectQueryScalar(dato);
-
 
                 //el id de la venta
                 string idventa = "SELECT MAX(ID) FROM Venta";
@@ -161,12 +175,6 @@ namespace Taller2
                 int w = conex.executeNonQuery(detalleventa_libro);
                 
             }
-
-
-
-
-
-
 
             conex.close();
 
