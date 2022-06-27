@@ -106,16 +106,10 @@ namespace Taller2
                 String tpagarstring = tpagarint.ToString();
                 totalpagar.Text = tpagarstring;
             }
-            
-            
-                
-
+                                     
 
                 conex.close();
-            
-
-
-            
+                        
         }
 
         private void BotonComprar_Click(object sender, EventArgs e)

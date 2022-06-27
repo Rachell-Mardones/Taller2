@@ -45,7 +45,7 @@ namespace Taller2
             conex.open();
 
 
-            string insertar = "INSERT INTO Libro(ISBN, Nombre, Autor, Editorial, Anio, Idioma, Reseña, PrecioNeto, CantidadStock, PorcentajeDescuento) VALUES ('"+isbn.Text+"', '"+nombre.Text+"', '"+autor.Text+"', '"+editorial.Text+"', '"+anio.Text+"', '"+idioma.Text+"', '"+reseña.Text+"', '"+precioneto.Text+"', '"+stock.Text+"', '"+descuento.Text+"')";
+            string insertar = "INSERT INTO Libro(ISBN, Nombre, Autor, Editorial, Anio, Idioma, Reseña, PrecioNeto, Stock, PorcentajeDescuento) VALUES ('"+isbn.Text+"', '"+nombre.Text+"', '"+autor.Text+"', '"+editorial.Text+"', '"+anio.Text+"', '"+idioma.Text+"', '"+reseña.Text+"', '"+precioneto.Text+"', '"+stock.Text+"', '"+descuento.Text+"')";
             int x = conex.executeNonQuery(insertar);
             if (x == 1)
             {
@@ -57,8 +57,6 @@ namespace Taller2
             }       
            
             conex.close();
-
-
 
             isbn.Text = "";
             nombre.Text = "";
@@ -89,15 +87,6 @@ namespace Taller2
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void cuadrocategorias_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void BotonAgregarCategoria_Click_1(object sender, EventArgs e)
         {
@@ -107,13 +96,10 @@ namespace Taller2
             //falta restriccion para que ingrese un tipo de categoria una sola vez
             string id = "SELECT ID FROM Categoria WHERE Nombre ='" + listacategorias.Text + "'";
             string categoriaencontrada = conex.selectQueryScalar(id);
-            
-            
-            string insertarcategoria = "INSERT INTO Libro_Categoria(LibroISBN, CategoriaID) VALUES ('" + isbn.Text + "', '" + categoriaencontrada + "')";
+           
+            string insertarcategoria = "INSERT INTO Libro_Categoria(LibroISBN, CategoriaID) VALUES ('" + isbn.Text + "','" + categoriaencontrada + "')";
             int q = conex.executeNonQuery(insertarcategoria);
-
-
-
+                        
             //Imprimir las categorias que se ingresan en el recuadro
             cuadrocategorias.Text += listacategorias.Text + "\r\n";
 

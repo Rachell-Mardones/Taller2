@@ -30,6 +30,7 @@ namespace Taller2
             ConexMySQL conex = new ConexMySQL();
             conex.open();
             
+            //Insertar los datos de empleado en la tabla empleado
             string agregar = "INSERT INTO Empleado(Rut, Nombre,Salario,Fecha) VALUES ('"+rut.Text+"', '"+nombre.Text+"','"+salario.Text+"','"+fecha.Text+"')";
             int x=conex.executeNonQuery(agregar);
             if (x == 1)
