@@ -58,12 +58,7 @@ namespace Taller2
             ConexMySQL conex = new ConexMySQL();
             conex.open();
 
-            if (string.IsNullOrWhiteSpace(listacliente.Text) || string.IsNullOrWhiteSpace(listavendedor.Text))
-            {
-                MessageBox.Show("Complete los campos");
-            }
-            else
-            {
+            
                 string cliente = "SELECT Nombre FROM Cliente WHERE Rut = '" + listacliente.Text + "'";
                 string buscarcliente = conex.selectQueryScalar(cliente);
 
@@ -71,12 +66,13 @@ namespace Taller2
                 string buscarvendedor = conex.selectQueryScalar(vendedor);
 
                 string datosventa = "INSERT INTO Venta(Comprador, Vendedor, EmpleadoRut, ClienteRut, Fecha, Hora) VALUES ('" + buscarcliente + "', '" + buscarvendedor + "','" + listavendedor.Text + "', '" + listacliente.Text + "','" + fecha.Text + "', '" + hora.Text + "')";
-                
+                int q = conex.executeNonQuery(datosventa);
+            
 
-                DetalleVenta f = new DetalleVenta();
+            DetalleVenta f = new DetalleVenta();
                 this.Hide();
                 f.Show();
-            }
+            
             
 
             

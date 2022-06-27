@@ -57,6 +57,21 @@ namespace Taller2
             }       
            
             conex.close();
+
+
+
+            isbn.Text = "";
+            nombre.Text = "";
+            autor.Text = "";
+            editorial.Text = "";
+            anio.Text = "";
+            idioma.Text = "";
+            reseña.Text = "";
+            precioneto.Text = "";
+            stock.Text = "";
+            descuento.Text = "";
+            listacategorias.Text = "";
+            cuadrocategorias.Text = "";
         }
 
         private void listacategorias_SelectedIndexChanged(object sender, EventArgs e)
